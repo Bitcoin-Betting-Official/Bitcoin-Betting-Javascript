@@ -8,7 +8,7 @@ checkEnvironentVariables();
 
 // Operation Config
 const amount = 0.00001;   // 0.01 mWBTC
-const currencyId = 2;   // Currency ID: 'mBTC' = 0, 'mETH' = 1, 'WBTC' = 2
+const currencyId = 1;   // Currency ID: 'mBTC' = 0, 'mETH' = 1, 'WBTC' = 2
 
 // Wallet Config
 const account = privateKeyToAccount(process.env.PRIVATE_KEY)

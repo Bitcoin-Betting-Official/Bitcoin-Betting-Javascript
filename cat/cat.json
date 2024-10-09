@@ -1,0 +1,106 @@
+{
+  "State": "Success",
+  "Type": "SubscribeSports",
+  "Data": [
+    [
+      "0",
+      "ALL",
+      "ALL"
+    ],
+    [
+      "13",
+      "AMERICANFOOTBALL",
+      "AMERICAN FOOTBALL"
+    ],
+    [
+      "14",
+      "BASEBALL",
+      "BASEBALL"
+    ],
+    [
+      "12",
+      "BASKETBALL",
+      "BASKETBALL"
+    ],
+    [
+      "40",
+      "BITCOIN",
+      "BITCOIN"
+    ],
+    [
+      "6",
+      "BOXING",
+      "BOXING"
+    ],
+    [
+      "4",
+      "CRICKET",
+      "CRICKET"
+    ],
+    [
+      "131",
+      "DICE",
+      "DICE"
+    ],
+    [
+      "32",
+      "ESPORTS",
+      "ESPORTS"
+    ],
+    [
+      "3",
+      "GOLF",
+      "GOLF"
+    ],
+    [
+      "19",
+      "HANDBALL",
+      "HANDBALL"
+    ],
+    [
+      "30",
+      "HOCKEY",
+      "HOCKEY"
+    ],
+    [
+      "35",
+      "MIXEDMARTIALARTS",
+      "MIXED MARTIAL ARTS"
+    ],
+    [
+      "15",
+      "POLITICS",
+      "POLITICS"
+    ],
+    [
+      "34",
+      "RESERVED4",
+      "RESERVED4"
+    ],
+    [
+      "11",
+      "RUGBYLEAGUE",
+      "RUGBY LEAGUE"
+    ],
+    [
+      "5",
+      "RUGBYUNION",
+      "RUGBY UNION"
+    ],
+    [
+      "1",
+      "SOCCER",
+      "SOCCER"
+    ],
+    [
+      "2",
+      "TENNIS",
+      "TENNIS"
+    ],
+    [
+      "18",
+      "VOLLEYBALL",
+      "VOLLEYBALL"
+    ]
+  ]
+}

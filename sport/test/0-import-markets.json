@@ -1,0 +1,2066 @@
+[
+  {
+    "ID": "32074628-3895-443b-9da5-095a1d342d39",
+    "LastSoftCh": 638640807939083000,
+    "MarketSummary": "AMERICANFOOTBALL;NCAA;New Mexico State @ Jacksonville State;1st Half Handicap Spread -11.5;10/09/2024 23:30:00;New Mexico State +11.5 ,Jacksonville State -11.5 ,;1598272494",
+    "MainNodeID": 104,
+    "Comp": "NCAA",
+    "CreationDate": 638638493944174500,
+    "Descr": "1st Half Handicap Spread -11.5",
+    "Title": "New Mexico State @ Jacksonville State",
+    "Cat": 13,
+    "ClosD": 638641134000000000,
+    "SettlD": 638641170000000000,
+    "Ru": [
+      {
+        "OrdBook": {
+          "MarketID": "32074628-3895-443b-9da5-095a1d342d39",
+          "RunnerID": 0,
+          "Bids": [
+            [
+              1.884,
+              28.11
+            ]
+          ],
+          "Asks": [
+            [
+              2.05,
+              25.11
+            ]
+          ]
+        },
+        "Name": "New Mexico State +11.5 ",
+        "mCT": 6000
+      },
+      {
+        "Name": "Jacksonville State -11.5 ",
+        "mCT": 6000
+      }
+    ],
+    "Type": 3,
+    "Period": 7,
+    "Comm": 0.0011,
+    "Creator": 2,
+    "Settler": {
+      "2": true,
+      "16": true,
+      "104": true
+    },
+    "ComRecip": {
+      "104": 1
+    },
+    "SetFin": 24,
+    "evID": 1598272494
+  },
+  {
+    "ID": "8c76bd8a-f86c-47a4-84a6-4a28bec31c12",
+    "LastSoftCh": 638640722448500200,
+    "MarketSummary": "AMERICANFOOTBALL;NCAA;New Mexico State @ Jacksonville State;1st Half Handicap Spread -10.5;10/09/2024 23:30:00;New Mexico State +10.5 ,Jacksonville State -10.5 ,;1598272494",
+    "MainNodeID": 104,
+    "Comp": "NCAA",
+    "CreationDate": 638638493948898200,
+    "Descr": "1st Half Handicap Spread -10.5",
+    "Title": "New Mexico State @ Jacksonville State",
+    "Cat": 13,
+    "ClosD": 638641134000000000,
+    "SettlD": 638641170000000000,
+    "Ru": [
+      {
+        "OrdBook": {
+          "MarketID": "8c76bd8a-f86c-47a4-84a6-4a28bec31c12",
+          "RunnerID": 0,
+          "Bids": [
+            [
+              2.02,
+              25.11
+            ]
+          ],
+          "Asks": [
+            [
+              2.23,
+              25.11
+            ]
+          ]
+        },
+        "Name": "New Mexico State +10.5 ",
+        "mCT": 6000
+      },
+      {
+        "Name": "Jacksonville State -10.5 ",
+        "mCT": 6000
+      }
+    ],
+    "Type": 3,
+    "Period": 7,
+    "Comm": 0.0011,
+    "Creator": 2,
+    "Settler": {
+      "2": true,
+      "16": true,
+      "104": true
+    },
+    "ComRecip": {
+      "104": 1
+    },
+    "SetFin": 24,
+    "evID": 1598272494
+  },
+  {
+    "ID": "0abd208e-acdb-47c0-b471-918511501154",
+    "LastSoftCh": 638640807939114900,
+    "MarketSummary": "AMERICANFOOTBALL;NCAA;New Mexico State @ Jacksonville State;Total Home - 1st Half  Over/Under 20.5;10/09/2024 23:30:00;Over 20.5 ,Under 20.5 ,;1598272494",
+    "MainNodeID": 104,
+    "Comp": "NCAA",
+    "CreationDate": 638638493955674500,
+    "Descr": "Total Home - 1st Half  Over/Under 20.5",
+    "Title": "New Mexico State @ Jacksonville State",
+    "Cat": 13,
+    "ClosD": 638641134000000000,
+    "SettlD": 638641170000000000,
+    "Ru": [
+      {
+        "OrdBook": {
+          "MarketID": "0abd208e-acdb-47c0-b471-918511501154",
+          "RunnerID": 0,
+          "Bids": [
+            [
+              1.683,
+              12.11
+            ]
+          ],
+          "Asks": [
+            [
+              1.918,
+              9.11
+            ]
+          ]
+        },
+        "Name": "Over 20.5 ",
+        "mCT": 6000
+      },
+      {
+        "Name": "Under 20.5 ",
+        "mCT": 6000
+      }
+    ],
+    "Type": 1,
+    "Period": 7,
+    "Comm": 0.0011,
+    "Creator": 2,
+    "Settler": {
+      "2": true,
+      "16": true,
+      "104": true
+    },
+    "ComRecip": {
+      "104": 1
+    },
+    "SetFin": 24,
+    "evID": 1598272494
+  },
+  {
+    "ID": "9e77f7be-5e39-4306-aa28-d1ddf7b25bb4",
+    "LastSoftCh": 638640801522683100,
+    "MarketSummary": "AMERICANFOOTBALL;NCAA;New Mexico State @ Jacksonville State;1st Quarter;10/09/2024 23:30:00;New Mexico State,Jacksonville State,;1598272494",
+    "MainNodeID": 104,
+    "Comp": "NCAA",
+    "CreationDate": 638638493957906800,
+    "Descr": "1st Quarter",
+    "Title": "New Mexico State @ Jacksonville State",
+    "Cat": 13,
+    "ClosD": 638641134000000000,
+    "SettlD": 638641170000000000,
+    "Ru": [
+      {
+        "OrdBook": {
+          "MarketID": "9e77f7be-5e39-4306-aa28-d1ddf7b25bb4",
+          "RunnerID": 0,
+          "Bids": [
+            [
+              4.16,
+              17.11
+            ]
+          ],
+          "Asks": [
+            [
+              5.42,
+              17.11
+            ]
+          ]
+        },
+        "Name": "New Mexico State",
+        "mCT": 6000
+      },
+      {
+        "Name": "Jacksonville State",
+        "mCT": 6000
+      }
+    ],
+    "Period": 9,
+    "Comm": 0.0011,
+    "Creator": 2,
+    "Settler": {
+      "2": true,
+      "16": true,
+      "104": true
+    },
+    "ComRecip": {
+      "104": 1
+    },
+    "SetFin": 24,
+    "evID": 1598272494
+  },
+  {
+    "ID": "bff498a9-1efe-438d-ab59-6401ab08481c",
+    "LastSoftCh": 638640804729667700,
+    "MarketSummary": "AMERICANFOOTBALL;NCAA;New Mexico State @ Jacksonville State;Total Away - 1st Quarter  Over/Under 0.5;10/09/2024 23:30:00;Over 0.5 ,Under 0.5 ,;1598272494",
+    "MainNodeID": 104,
+    "Comp": "NCAA",
+    "CreationDate": 638638493962737900,
+    "Descr": "Total Away - 1st Quarter  Over/Under 0.5",
+    "Title": "New Mexico State @ Jacksonville State",
+    "Cat": 13,
+    "ClosD": 638641134000000000,
+    "SettlD": 638641170000000000,
+    "Ru": [
+      {
+        "OrdBook": {
+          "MarketID": "bff498a9-1efe-438d-ab59-6401ab08481c",
+          "RunnerID": 0,
+          "Bids": [
+            [
+              1.861,
+              9.11
+            ]
+          ],
+          "Asks": [
+            [
+              2.15,
+              8.11
+            ]
+          ]
+        },
+        "Name": "Over 0.5 ",
+        "mCT": 6000
+      },
+      {
+        "Name": "Under 0.5 ",
+        "mCT": 6000
+      }
+    ],
+    "Type": 1,
+    "Period": 9,
+    "Comm": 0.0011,
+    "Creator": 2,
+    "Settler": {
+      "2": true,
+      "16": true,
+      "104": true
+    },
+    "ComRecip": {
+      "104": 1
+    },
+    "SetFin": 24,
+    "evID": 1598272494
+  },
+  {
+    "ID": "412e3c60-1507-4675-a955-3dcff7449be7",
+    "LastSoftCh": 638640807938928300,
+    "MarketSummary": "AMERICANFOOTBALL;NCAA;New Mexico State @ Jacksonville State;Game Total Points Over/Under 57.5;10/09/2024 23:30:00;Over 57.5 ,Under 57.5 ,;1598272494",
+    "MainNodeID": 104,
+    "Comp": "NCAA",
+    "CreationDate": 638638493927663200,
+    "Descr": "Game Total Points Over/Under 57.5",
+    "Title": "New Mexico State @ Jacksonville State",
+    "Cat": 13,
+    "ClosD": 638641134000000000,
+    "SettlD": 638641206000000000,
+    "Ru": [
+      {
+        "OrdBook": {
+          "MarketID": "412e3c60-1507-4675-a955-3dcff7449be7",
+          "RunnerID": 0,
+          "Bids": [
+            [
+              1.757,
+              67.11
+            ]
+          ],
+          "Asks": [
+            [
+              1.885,
+              57.11
+            ]
+          ]
+        },
+        "Name": "Over 57.5 ",
+        "mCT": 6000
+      },
+      {
+        "Name": "Under 57.5 ",
+        "mCT": 6000
+      }
+    ],
+    "Type": 1,
+    "Period": 1,
+    "Comm": 0.0011,
+    "Creator": 2,
+    "Settler": {
+      "2": true,
+      "16": true,
+      "104": true
+    },
+    "ComRecip": {
+      "104": 1
+    },
+    "SetFin": 24,
+    "evID": 1598272494
+  },
+  {
+    "ID": "5b4a2375-5c3d-46f8-9490-ca0fdcbd1ecc",
+    "LastSoftCh": 638640804729514800,
+    "MarketSummary": "AMERICANFOOTBALL;NCAA;New Mexico State @ Jacksonville State;1st Half Handicap Spread -12.5;10/09/2024 23:30:00;New Mexico State +12.5 ,Jacksonville State -12.5 ,;1598272494",
+    "MainNodeID": 104,
+    "Comp": "NCAA",
+    "CreationDate": 638638493950014700,
+    "Descr": "1st Half Handicap Spread -12.5",
+    "Title": "New Mexico State @ Jacksonville State",
+    "Cat": 13,
+    "ClosD": 638641134000000000,
+    "SettlD": 638641170000000000,
+    "Ru": [
+      {
+        "OrdBook": {
+          "MarketID": "5b4a2375-5c3d-46f8-9490-ca0fdcbd1ecc",
+          "RunnerID": 0,
+          "Bids": [
+            [
+              1.846,
+              30.11
+            ]
+          ],
+          "Asks": [
+            [
+              2.02,
+              25.11
+            ]
+          ]
+        },
+        "Name": "New Mexico State +12.5 ",
+        "mCT": 6000
+      },
+      {
+        "Name": "Jacksonville State -12.5 ",
+        "mCT": 6000
+      }
+    ],
+    "Type": 3,
+    "Period": 7,
+    "Comm": 0.0011,
+    "Creator": 2,
+    "Settler": {
+      "2": true,
+      "16": true,
+      "104": true
+    },
+    "ComRecip": {
+      "104": 1
+    },
+    "SetFin": 24,
+    "evID": 1598272494
+  },
+  {
+    "ID": "04a0ee1c-569d-44ff-a229-64ff9c1d2b33",
+    "LastSoftCh": 638640807939006200,
+    "MarketSummary": "AMERICANFOOTBALL;NCAA;New Mexico State @ Jacksonville State;Game Total Points Over/Under 59.0;10/09/2024 23:30:00;Over 59.0 ,Under 59.0 ,;1598272494",
+    "MainNodeID": 104,
+    "Comp": "NCAA",
+    "CreationDate": 638638493935746700,
+    "Descr": "Game Total Points Over/Under 59.0",
+    "Title": "New Mexico State @ Jacksonville State",
+    "Cat": 13,
+    "ClosD": 638641134000000000,
+    "SettlD": 638641206000000000,
+    "Ru": [
+      {
+        "OrdBook": {
+          "MarketID": "04a0ee1c-569d-44ff-a229-64ff9c1d2b33",
+          "RunnerID": 0,
+          "Bids": [
+            [
+              1.908,
+              56.11
+            ]
+          ],
+          "Asks": [
+            [
+              2.07,
+              51.11
+            ]
+          ]
+        },
+        "Name": "Over 59.0 ",
+        "mCT": 6000
+      },
+      {
+        "Name": "Under 59.0 ",
+        "mCT": 6000
+      }
+    ],
+    "Type": 1,
+    "Period": 1,
+    "Comm": 0.0011,
+    "Creator": 2,
+    "Settler": {
+      "2": true,
+      "16": true,
+      "104": true
+    },
+    "ComRecip": {
+      "104": 1
+    },
+    "SetFin": 24,
+    "evID": 1598272494
+  },
+  {
+    "ID": "421ccacc-c050-44f6-ae81-ddb408d061fc",
+    "LastSoftCh": 638640807939021400,
+    "MarketSummary": "AMERICANFOOTBALL;NCAA;New Mexico State @ Jacksonville State;Game Total Points Over/Under 59.5;10/09/2024 23:30:00;Over 59.5 ,Under 59.5 ,;1598272494",
+    "MainNodeID": 104,
+    "Comp": "NCAA",
+    "CreationDate": 638638493936887600,
+    "Descr": "Game Total Points Over/Under 59.5",
+    "Title": "New Mexico State @ Jacksonville State",
+    "Cat": 13,
+    "ClosD": 638641134000000000,
+    "SettlD": 638641206000000000,
+    "Ru": [
+      {
+        "OrdBook": {
+          "MarketID": "421ccacc-c050-44f6-ae81-ddb408d061fc",
+          "RunnerID": 0,
+          "Bids": [
+            [
+              1.961,
+              53.11
+            ]
+          ],
+          "Asks": [
+            [
+              2.14,
+              51.11
+            ]
+          ]
+        },
+        "Name": "Over 59.5 ",
+        "mCT": 6000
+      },
+      {
+        "Name": "Under 59.5 ",
+        "mCT": 6000
+      }
+    ],
+    "Type": 1,
+    "Period": 1,
+    "Comm": 0.0011,
+    "Creator": 2,
+    "Settler": {
+      "2": true,
+      "16": true,
+      "104": true
+    },
+    "ComRecip": {
+      "104": 1
+    },
+    "SetFin": 24,
+    "evID": 1598272494
+  },
+  {
+    "ID": "1c065481-232a-459c-90b6-b0503e6f3749",
+    "LastSoftCh": 638640807939103000,
+    "MarketSummary": "AMERICANFOOTBALL;NCAA;New Mexico State @ Jacksonville State;1st Half Total Points Over/Under 30.0;10/09/2024 23:30:00;Over 30.0 ,Under 30.0 ,;1598272494",
+    "MainNodeID": 104,
+    "Comp": "NCAA",
+    "CreationDate": 638638493954530700,
+    "Descr": "1st Half Total Points Over/Under 30.0",
+    "Title": "New Mexico State @ Jacksonville State",
+    "Cat": 13,
+    "ClosD": 638641134000000000,
+    "SettlD": 638641170000000000,
+    "Ru": [
+      {
+        "OrdBook": {
+          "MarketID": "1c065481-232a-459c-90b6-b0503e6f3749",
+          "RunnerID": 0,
+          "Bids": [
+            [
+              1.757,
+              22.11
+            ]
+          ],
+          "Asks": [
+            [
+              1.918,
+              18.11
+            ]
+          ]
+        },
+        "Name": "Over 30.0 ",
+        "mCT": 6000
+      },
+      {
+        "Name": "Under 30.0 ",
+        "mCT": 6000
+      }
+    ],
+    "Type": 1,
+    "Period": 7,
+    "Comm": 0.0011,
+    "Creator": 2,
+    "Settler": {
+      "2": true,
+      "16": true,
+      "104": true
+    },
+    "ComRecip": {
+      "104": 1
+    },
+    "SetFin": 24,
+    "evID": 1598272494
+  },
+  {
+    "ID": "81c7e346-98f4-4905-ab63-95cad3bb056a",
+    "LastSoftCh": 638640807938882800,
+    "MarketSummary": "AMERICANFOOTBALL;NCAA;New Mexico State @ Jacksonville State;Game Total Points Over/Under 58.5;10/09/2024 23:30:00;Over 58.5 ,Under 58.5 ,;1598272494",
+    "MainNodeID": 104,
+    "Comp": "NCAA",
+    "CreationDate": 638638493934569600,
+    "Descr": "Game Total Points Over/Under 58.5",
+    "Title": "New Mexico State @ Jacksonville State",
+    "Cat": 13,
+    "ClosD": 638641134000000000,
+    "SettlD": 638641206000000000,
+    "Ru": [
+      {
+        "OrdBook": {
+          "MarketID": "81c7e346-98f4-4905-ab63-95cad3bb056a",
+          "RunnerID": 0,
+          "Bids": [
+            [
+              1.853,
+              59.11
+            ]
+          ],
+          "Asks": [
+            [
+              2,
+              51.11
+            ]
+          ]
+        },
+        "Name": "Over 58.5 ",
+        "mCT": 6000
+      },
+      {
+        "Name": "Under 58.5 ",
+        "mCT": 6000
+      }
+    ],
+    "Type": 1,
+    "Period": 1,
+    "Comm": 0.0011,
+    "Creator": 2,
+    "Settler": {
+      "2": true,
+      "16": true,
+      "104": true
+    },
+    "ComRecip": {
+      "104": 1
+    },
+    "SetFin": 24,
+    "evID": 1598272494
+  },
+  {
+    "ID": "557035a4-d69a-437d-902c-cb2247b69e40",
+    "LastSoftCh": 638640804729357000,
+    "MarketSummary": "AMERICANFOOTBALL;NCAA;New Mexico State @ Jacksonville State;Game Handicap Spread -21.0;10/09/2024 23:30:00;New Mexico State +21.0 ,Jacksonville State -21.0 ,;1598272494",
+    "MainNodeID": 104,
+    "Comp": "NCAA",
+    "CreationDate": 638638493588736900,
+    "Descr": "Game Handicap Spread -21.0",
+    "Title": "New Mexico State @ Jacksonville State",
+    "Cat": 13,
+    "ClosD": 638641134000000000,
+    "SettlD": 638641206000000000,
+    "Ru": [
+      {
+        "OrdBook": {
+          "MarketID": "557035a4-d69a-437d-902c-cb2247b69e40",
+          "RunnerID": 0,
+          "Bids": [
+            [
+              1.846,
+              150.11
+            ]
+          ],
+          "Asks": [
+            [
+              1.963,
+              132.11
+            ]
+          ]
+        },
+        "Name": "New Mexico State +21.0 ",
+        "mCT": 6000
+      },
+      {
+        "Name": "Jacksonville State -21.0 ",
+        "mCT": 6000
+      }
+    ],
+    "Type": 3,
+    "Period": 1,
+    "Comm": 0.0011,
+    "Creator": 2,
+    "Settler": {
+      "2": true,
+      "16": true,
+      "104": true
+    },
+    "ComRecip": {
+      "104": 1
+    },
+    "SetFin": 24,
+    "evID": 1598272494
+  },
+  {
+    "ID": "fda095e2-b2c8-4468-a479-de61ef02d949",
+    "LastSoftCh": 638640807938834700,
+    "MarketSummary": "AMERICANFOOTBALL;NCAA;New Mexico State @ Jacksonville State;Game Handicap Spread -19.5;10/09/2024 23:30:00;New Mexico State +19.5 ,Jacksonville State -19.5 ,;1598272494",
+    "MainNodeID": 104,
+    "Comp": "NCAA",
+    "CreationDate": 638638493918716700,
+    "Descr": "Game Handicap Spread -19.5",
+    "Title": "New Mexico State @ Jacksonville State",
+    "Cat": 13,
+    "ClosD": 638641134000000000,
+    "SettlD": 638641206000000000,
+    "Ru": [
+      {
+        "OrdBook": {
+          "MarketID": "fda095e2-b2c8-4468-a479-de61ef02d949",
+          "RunnerID": 0,
+          "Bids": [
+            [
+              2.04,
+              127.11
+            ]
+          ],
+          "Asks": [
+            [
+              2.2,
+              127.11
+            ]
+          ]
+        },
+        "Name": "New Mexico State +19.5 ",
+        "mCT": 6000
+      },
+      {
+        "Name": "Jacksonville State -19.5 ",
+        "mCT": 6000
+      }
+    ],
+    "Type": 3,
+    "Period": 1,
+    "Comm": 0.0011,
+    "Creator": 2,
+    "Settler": {
+      "2": true,
+      "16": true,
+      "104": true
+    },
+    "ComRecip": {
+      "104": 1
+    },
+    "SetFin": 24,
+    "evID": 1598272494
+  },
+  {
+    "ID": "7d208ecb-81f3-4fb0-94ea-3420dcacd131",
+    "LastSoftCh": 638640804729342600,
+    "MarketSummary": "AMERICANFOOTBALL;NCAA;New Mexico State @ Jacksonville State;Game Handicap Spread -20.0;10/09/2024 23:30:00;New Mexico State +20.0 ,Jacksonville State -20.0 ,;1598272494",
+    "MainNodeID": 104,
+    "Comp": "NCAA",
+    "CreationDate": 638638493919866500,
+    "Descr": "Game Handicap Spread -20.0",
+    "Title": "New Mexico State @ Jacksonville State",
+    "Cat": 13,
+    "ClosD": 638641134000000000,
+    "SettlD": 638641206000000000,
+    "Ru": [
+      {
+        "OrdBook": {
+          "MarketID": "7d208ecb-81f3-4fb0-94ea-3420dcacd131",
+          "RunnerID": 0,
+          "Bids": [
+            [
+              1.99,
+              128.11
+            ]
+          ],
+          "Asks": [
+            [
+              2.13,
+              127.11
+            ]
+          ]
+        },
+        "Name": "New Mexico State +20.0 ",
+        "mCT": 6000
+      },
+      {
+        "Name": "Jacksonville State -20.0 ",
+        "mCT": 6000
+      }
+    ],
+    "Type": 3,
+    "Period": 1,
+    "Comm": 0.0011,
+    "Creator": 2,
+    "Settler": {
+      "2": true,
+      "16": true,
+      "104": true
+    },
+    "ComRecip": {
+      "104": 1
+    },
+    "SetFin": 24,
+    "evID": 1598272494
+  },
+  {
+    "ID": "be8b9023-3237-4b6b-8d3a-8aa80ef3d1a6",
+    "LastSoftCh": 638640804729283800,
+    "MarketSummary": "AMERICANFOOTBALL;NCAA;New Mexico State @ Jacksonville State;Game;10/09/2024 23:30:00;New Mexico State,Jacksonville State,;1598272494",
+    "MainNodeID": 104,
+    "Comp": "NCAA",
+    "CreationDate": 638638493916444000,
+    "Descr": "Game",
+    "Title": "New Mexico State @ Jacksonville State",
+    "Cat": 13,
+    "ClosD": 638641134000000000,
+    "SettlD": 638641206000000000,
+    "Ru": [
+      {
+        "OrdBook": {
+          "MarketID": "be8b9023-3237-4b6b-8d3a-8aa80ef3d1a6",
+          "RunnerID": 0,
+          "Bids": [
+            [
+              9.61,
+              68.11
+            ]
+          ],
+          "Asks": [
+            [
+              14.8,
+              68.11
+            ]
+          ]
+        },
+        "Name": "New Mexico State",
+        "mCT": 6000
+      },
+      {
+        "Name": "Jacksonville State",
+        "mCT": 6000
+      }
+    ],
+    "Period": 1,
+    "Comm": 0.0011,
+    "Creator": 2,
+    "Settler": {
+      "2": true,
+      "16": true,
+      "104": true
+    },
+    "ComRecip": {
+      "104": 1
+    },
+    "SetFin": 24,
+    "evID": 1598272494
+  },
+  {
+    "ID": "5c667116-4f5c-4f0c-8bbb-671d7ff281ad",
+    "LastSoftCh": 638640807938943000,
+    "MarketSummary": "AMERICANFOOTBALL;NCAA;New Mexico State @ Jacksonville State;Game Total Points Over/Under 58.0;10/09/2024 23:30:00;Over 58.0 ,Under 58.0 ,;1598272494",
+    "MainNodeID": 104,
+    "Comp": "NCAA",
+    "CreationDate": 638638493933413100,
+    "Descr": "Game Total Points Over/Under 58.0",
+    "Title": "New Mexico State @ Jacksonville State",
+    "Cat": 13,
+    "ClosD": 638641134000000000,
+    "SettlD": 638641206000000000,
+    "Ru": [
+      {
+        "OrdBook": {
+          "MarketID": "5c667116-4f5c-4f0c-8bbb-671d7ff281ad",
+          "RunnerID": 0,
+          "Bids": [
+            [
+              1.806,
+              63.11
+            ]
+          ],
+          "Asks": [
+            [
+              1.944,
+              54.11
+            ]
+          ]
+        },
+        "Name": "Over 58.0 ",
+        "mCT": 6000
+      },
+      {
+        "Name": "Under 58.0 ",
+        "mCT": 6000
+      }
+    ],
+    "Type": 1,
+    "Period": 1,
+    "Comm": 0.0011,
+    "Creator": 2,
+    "Settler": {
+      "2": true,
+      "16": true,
+      "104": true
+    },
+    "ComRecip": {
+      "104": 1
+    },
+    "SetFin": 24,
+    "evID": 1598272494
+  },
+  {
+    "ID": "12b01c7e-81f2-4abf-ac0c-cc3e7aec28df",
+    "LastSoftCh": 638640807938913400,
+    "MarketSummary": "AMERICANFOOTBALL;NCAA;New Mexico State @ Jacksonville State;Game Total Points Over/Under 57.0;10/09/2024 23:30:00;Over 57.0 ,Under 57.0 ,;1598272494",
+    "MainNodeID": 104,
+    "Comp": "NCAA",
+    "CreationDate": 638638493932218400,
+    "Descr": "Game Total Points Over/Under 57.0",
+    "Title": "New Mexico State @ Jacksonville State",
+    "Cat": 13,
+    "ClosD": 638641134000000000,
+    "SettlD": 638641206000000000,
+    "Ru": [
+      {
+        "OrdBook": {
+          "MarketID": "12b01c7e-81f2-4abf-ac0c-cc3e7aec28df",
+          "RunnerID": 0,
+          "Bids": [
+            [
+              1.708,
+              71.11
+            ]
+          ],
+          "Asks": [
+            [
+              1.835,
+              61.11
+            ]
+          ]
+        },
+        "Name": "Over 57.0 ",
+        "mCT": 6000
+      },
+      {
+        "Name": "Under 57.0 ",
+        "mCT": 6000
+      }
+    ],
+    "Type": 1,
+    "Period": 1,
+    "Comm": 0.0011,
+    "Creator": 2,
+    "Settler": {
+      "2": true,
+      "16": true,
+      "104": true
+    },
+    "ComRecip": {
+      "104": 1
+    },
+    "SetFin": 24,
+    "evID": 1598272494
+  },
+  {
+    "ID": "fecf257f-7647-44e7-80f7-f0de48cf73dd",
+    "LastSoftCh": 638640804729633500,
+    "MarketSummary": "AMERICANFOOTBALL;NCAA;New Mexico State @ Jacksonville State;1st Quarter 1Q Handicap Spread -7.0;10/09/2024 23:30:00;New Mexico State +7.0 ,Jacksonville State -7.0 ,;1598272494",
+    "MainNodeID": 104,
+    "Comp": "NCAA",
+    "CreationDate": 638638493959488600,
+    "Descr": "1st Quarter 1Q Handicap Spread -7.0",
+    "Title": "New Mexico State @ Jacksonville State",
+    "Cat": 13,
+    "ClosD": 638641134000000000,
+    "SettlD": 638641170000000000,
+    "Ru": [
+      {
+        "OrdBook": {
+          "MarketID": "fecf257f-7647-44e7-80f7-f0de48cf73dd",
+          "RunnerID": 0,
+          "Bids": [
+            [
+              1.84,
+              20.11
+            ]
+          ],
+          "Asks": [
+            [
+              2,
+              17.11
+            ]
+          ]
+        },
+        "Name": "New Mexico State +7.0 ",
+        "mCT": 6000
+      },
+      {
+        "Name": "Jacksonville State -7.0 ",
+        "mCT": 6000
+      }
+    ],
+    "Type": 3,
+    "Period": 9,
+    "Comm": 0.0011,
+    "Creator": 2,
+    "Settler": {
+      "2": true,
+      "16": true,
+      "104": true
+    },
+    "ComRecip": {
+      "104": 1
+    },
+    "SetFin": 24,
+    "evID": 1598272494
+  },
+  {
+    "ID": "f9ef118c-9c7b-4ec0-b73b-4e1745a509ce",
+    "LastSoftCh": 638640804729487600,
+    "MarketSummary": "AMERICANFOOTBALL;NCAA;New Mexico State @ Jacksonville State;1st Half Handicap Spread -8.5;10/09/2024 23:30:00;New Mexico State +8.5 ,Jacksonville State -8.5 ,;1598272494",
+    "MainNodeID": 104,
+    "Comp": "NCAA",
+    "CreationDate": 638638493945558100,
+    "Descr": "1st Half Handicap Spread -8.5",
+    "Title": "New Mexico State @ Jacksonville State",
+    "Cat": 13,
+    "ClosD": 638641134000000000,
+    "SettlD": 638641170000000000,
+    "Ru": [
+      {
+        "OrdBook": {
+          "MarketID": "f9ef118c-9c7b-4ec0-b73b-4e1745a509ce",
+          "RunnerID": 0,
+          "Bids": [
+            [
+              2.35,
+              25.11
+            ]
+          ],
+          "Asks": [
+            [
+              2.64,
+              25.11
+            ]
+          ]
+        },
+        "Name": "New Mexico State +8.5 ",
+        "mCT": 6000
+      },
+      {
+        "Name": "Jacksonville State -8.5 ",
+        "mCT": 6000
+      }
+    ],
+    "Type": 3,
+    "Period": 7,
+    "Comm": 0.0011,
+    "Creator": 2,
+    "Settler": {
+      "2": true,
+      "16": true,
+      "104": true
+    },
+    "ComRecip": {
+      "104": 1
+    },
+    "SetFin": 24,
+    "evID": 1598272494
+  },
+  {
+    "ID": "42c13830-1427-4426-a871-4121134936fc",
+    "LastSoftCh": 638640804729298800,
+    "MarketSummary": "AMERICANFOOTBALL;NCAA;New Mexico State @ Jacksonville State;Game Handicap Spread -18.5;10/09/2024 23:30:00;New Mexico State +18.5 ,Jacksonville State -18.5 ,;1598272494",
+    "MainNodeID": 104,
+    "Comp": "NCAA",
+    "CreationDate": 638639124701891200,
+    "Descr": "Game Handicap Spread -18.5",
+    "Title": "New Mexico State @ Jacksonville State",
+    "Cat": 13,
+    "ClosD": 638641134000000000,
+    "SettlD": 638641206000000000,
+    "Ru": [
+      {
+        "OrdBook": {
+          "MarketID": "42c13830-1427-4426-a871-4121134936fc",
+          "RunnerID": 0,
+          "Bids": [
+            [
+              2.1,
+              127.11
+            ]
+          ],
+          "Asks": [
+            [
+              2.27,
+              127.11
+            ]
+          ]
+        },
+        "Name": "New Mexico State +18.5 ",
+        "mCT": 6000
+      },
+      {
+        "Name": "Jacksonville State -18.5 ",
+        "mCT": 6000
+      }
+    ],
+    "Type": 3,
+    "Period": 1,
+    "Comm": 0.0011,
+    "Creator": 2,
+    "Settler": {
+      "2": true,
+      "16": true,
+      "104": true
+    },
+    "ComRecip": {
+      "104": 1
+    },
+    "SetFin": 24,
+    "evID": 1598272494
+  },
+  {
+    "ID": "8dbae382-c07e-4013-a10e-71322ef637cd",
+    "LastSoftCh": 638640807939076400,
+    "MarketSummary": "AMERICANFOOTBALL;NCAA;New Mexico State @ Jacksonville State;Total Away - Game Team 2 Points Over/Under 17.5;10/09/2024 23:30:00;Over 17.5 ,Under 17.5 ,;1598272494",
+    "MainNodeID": 104,
+    "Comp": "NCAA",
+    "CreationDate": 638638493939935400,
+    "Descr": "Total Away - Game Team 2 Points Over/Under 17.5",
+    "Title": "New Mexico State @ Jacksonville State",
+    "Cat": 13,
+    "ClosD": 638641134000000000,
+    "SettlD": 638641206000000000,
+    "Ru": [
+      {
+        "OrdBook": {
+          "MarketID": "8dbae382-c07e-4013-a10e-71322ef637cd",
+          "RunnerID": 0,
+          "Bids": [
+            [
+              1.832,
+              20.11
+            ]
+          ],
+          "Asks": [
+            [
+              1.972,
+              17.11
+            ]
+          ]
+        },
+        "Name": "Over 17.5 ",
+        "mCT": 6000
+      },
+      {
+        "Name": "Under 17.5 ",
+        "mCT": 6000
+      }
+    ],
+    "Type": 1,
+    "Period": 1,
+    "Comm": 0.0011,
+    "Creator": 2,
+    "Settler": {
+      "2": true,
+      "16": true,
+      "104": true
+    },
+    "ComRecip": {
+      "104": 1
+    },
+    "SetFin": 24,
+    "evID": 1598272494
+  },
+  {
+    "ID": "778f65de-f458-468f-b220-3febb29ea16e",
+    "LastSoftCh": 638640804729656600,
+    "MarketSummary": "AMERICANFOOTBALL;NCAA;New Mexico State @ Jacksonville State;Total Home - 1st Quarter  Over/Under 9.5;10/09/2024 23:30:00;Over 9.5 ,Under 9.5 ,;1598272494",
+    "MainNodeID": 104,
+    "Comp": "NCAA",
+    "CreationDate": 638638493961662000,
+    "Descr": "Total Home - 1st Quarter  Over/Under 9.5",
+    "Title": "New Mexico State @ Jacksonville State",
+    "Cat": 13,
+    "ClosD": 638641134000000000,
+    "SettlD": 638641170000000000,
+    "Ru": [
+      {
+        "OrdBook": {
+          "MarketID": "778f65de-f458-468f-b220-3febb29ea16e",
+          "RunnerID": 0,
+          "Bids": [
+            [
+              1.908,
+              9.11
+            ]
+          ],
+          "Asks": [
+            [
+              2.22,
+              8.11
+            ]
+          ]
+        },
+        "Name": "Over 9.5 ",
+        "mCT": 6000
+      },
+      {
+        "Name": "Under 9.5 ",
+        "mCT": 6000
+      }
+    ],
+    "Type": 1,
+    "Period": 9,
+    "Comm": 0.0011,
+    "Creator": 2,
+    "Settler": {
+      "2": true,
+      "16": true,
+      "104": true
+    },
+    "ComRecip": {
+      "104": 1
+    },
+    "SetFin": 24,
+    "evID": 1598272494
+  },
+  {
+    "ID": "db2129e0-131c-410c-8ee3-2699188e2b2d",
+    "LastSoftCh": 638640815596677400,
+    "MarketSummary": "AMERICANFOOTBALL;NCAA;New Mexico State @ Jacksonville State;Game Handicap Spread -22.5;10/09/2024 23:30:00;New Mexico State +22.5 ,Jacksonville State -22.5 ,;1598272494",
+    "MainNodeID": 104,
+    "Comp": "NCAA",
+    "CreationDate": 638638493925209300,
+    "Descr": "Game Handicap Spread -22.5",
+    "Title": "New Mexico State @ Jacksonville State",
+    "Cat": 13,
+    "ClosD": 638641134000000000,
+    "SettlD": 638641206000000000,
+    "Ru": [
+      {
+        "OrdBook": {
+          "MarketID": "db2129e0-131c-410c-8ee3-2699188e2b2d",
+          "RunnerID": 0,
+          "Bids": [
+            [
+              1.703,
+              181.11
+            ]
+          ],
+          "Asks": [
+            [
+              1.821,
+              155.11
+            ]
+          ]
+        },
+        "Name": "New Mexico State +22.5 ",
+        "mCT": 6000
+      },
+      {
+        "Name": "Jacksonville State -22.5 ",
+        "mCT": 6000
+      }
+    ],
+    "Type": 3,
+    "Period": 1,
+    "Comm": 0.0011,
+    "Creator": 2,
+    "Settler": {
+      "2": true,
+      "16": true,
+      "104": true
+    },
+    "ComRecip": {
+      "104": 1
+    },
+    "SetFin": 24,
+    "evID": 1598272494
+  },
+  {
+    "ID": "70d567f6-7cab-4b06-8368-e139faa5d72f",
+    "LastSoftCh": 638640722448489300,
+    "MarketSummary": "AMERICANFOOTBALL;NCAA;New Mexico State @ Jacksonville State;1st Half Handicap Spread -10.0;10/09/2024 23:30:00;New Mexico State +10.0 ,Jacksonville State -10.0 ,;1598272494",
+    "MainNodeID": 104,
+    "Comp": "NCAA",
+    "CreationDate": 638638493947793300,
+    "Descr": "1st Half Handicap Spread -10.0",
+    "Title": "New Mexico State @ Jacksonville State",
+    "Cat": 13,
+    "ClosD": 638641134000000000,
+    "SettlD": 638641170000000000,
+    "Ru": [
+      {
+        "OrdBook": {
+          "MarketID": "70d567f6-7cab-4b06-8368-e139faa5d72f",
+          "RunnerID": 0,
+          "Bids": [
+            [
+              2.15,
+              25.11
+            ]
+          ],
+          "Asks": [
+            [
+              2.4,
+              25.11
+            ]
+          ]
+        },
+        "Name": "New Mexico State +10.0 ",
+        "mCT": 6000
+      },
+      {
+        "Name": "Jacksonville State -10.0 ",
+        "mCT": 6000
+      }
+    ],
+    "Type": 3,
+    "Period": 7,
+    "Comm": 0.0011,
+    "Creator": 2,
+    "Settler": {
+      "2": true,
+      "16": true,
+      "104": true
+    },
+    "ComRecip": {
+      "104": 1
+    },
+    "SetFin": 24,
+    "evID": 1598272494
+  },
+  {
+    "ID": "329bc6c4-5cf5-4f02-bb6e-ab089dc7c3f2",
+    "LastSoftCh": 638640807939120500,
+    "MarketSummary": "AMERICANFOOTBALL;NCAA;New Mexico State @ Jacksonville State;Total Away - 1st Half  Over/Under 7.5;10/09/2024 23:30:00;Over 7.5 ,Under 7.5 ,;1598272494",
+    "MainNodeID": 104,
+    "Comp": "NCAA",
+    "CreationDate": 638638493956817800,
+    "Descr": "Total Away - 1st Half  Over/Under 7.5",
+    "Title": "New Mexico State @ Jacksonville State",
+    "Cat": 13,
+    "ClosD": 638641134000000000,
+    "SettlD": 638641170000000000,
+    "Ru": [
+      {
+        "OrdBook": {
+          "MarketID": "329bc6c4-5cf5-4f02-bb6e-ab089dc7c3f2",
+          "RunnerID": 0,
+          "Bids": [
+            [
+              1.818,
+              10.11
+            ]
+          ],
+          "Asks": [
+            [
+              2.1,
+              8.11
+            ]
+          ]
+        },
+        "Name": "Over 7.5 ",
+        "mCT": 6000
+      },
+      {
+        "Name": "Under 7.5 ",
+        "mCT": 6000
+      }
+    ],
+    "Type": 1,
+    "Period": 7,
+    "Comm": 0.0011,
+    "Creator": 2,
+    "Settler": {
+      "2": true,
+      "16": true,
+      "104": true
+    },
+    "ComRecip": {
+      "104": 1
+    },
+    "SetFin": 24,
+    "evID": 1598272494
+  },
+  {
+    "ID": "58cd70ad-8a3b-4fee-8e57-cf0b3427a300",
+    "LastSoftCh": 638640807939062700,
+    "MarketSummary": "AMERICANFOOTBALL;NCAA;New Mexico State @ Jacksonville State;Total Home - Game Team 1 Points Over/Under 38.5;10/09/2024 23:30:00;Over 38.5 ,Under 38.5 ,;1598272494",
+    "MainNodeID": 104,
+    "Comp": "NCAA",
+    "CreationDate": 638638493938325900,
+    "Descr": "Total Home - Game Team 1 Points Over/Under 38.5",
+    "Title": "New Mexico State @ Jacksonville State",
+    "Cat": 13,
+    "ClosD": 638641134000000000,
+    "SettlD": 638641206000000000,
+    "Ru": [
+      {
+        "OrdBook": {
+          "MarketID": "58cd70ad-8a3b-4fee-8e57-cf0b3427a300",
+          "RunnerID": 0,
+          "Bids": [
+            [
+              1.868,
+              19.11
+            ]
+          ],
+          "Asks": [
+            [
+              2.02,
+              17.11
+            ]
+          ]
+        },
+        "Name": "Over 38.5 ",
+        "mCT": 6000
+      },
+      {
+        "Name": "Under 38.5 ",
+        "mCT": 6000
+      }
+    ],
+    "Type": 1,
+    "Period": 1,
+    "Comm": 0.0011,
+    "Creator": 2,
+    "Settler": {
+      "2": true,
+      "16": true,
+      "104": true
+    },
+    "ComRecip": {
+      "104": 1
+    },
+    "SetFin": 24,
+    "evID": 1598272494
+  },
+  {
+    "ID": "3558f88b-60bd-4e06-8165-9d7e23dcfe5b",
+    "LastSoftCh": 638640804729474000,
+    "MarketSummary": "AMERICANFOOTBALL;NCAA;New Mexico State @ Jacksonville State;1st Half;10/09/2024 23:30:00;New Mexico State,Jacksonville State,;1598272494",
+    "MainNodeID": 104,
+    "Comp": "NCAA",
+    "CreationDate": 638638493942248100,
+    "Descr": "1st Half",
+    "Title": "New Mexico State @ Jacksonville State",
+    "Cat": 13,
+    "ClosD": 638641134000000000,
+    "SettlD": 638641170000000000,
+    "Ru": [
+      {
+        "OrdBook": {
+          "MarketID": "3558f88b-60bd-4e06-8165-9d7e23dcfe5b",
+          "RunnerID": 0,
+          "Bids": [
+            [
+              6.2,
+              17.11
+            ]
+          ],
+          "Asks": [
+            [
+              9.1,
+              17.11
+            ]
+          ]
+        },
+        "Name": "New Mexico State",
+        "mCT": 6000
+      },
+      {
+        "Name": "Jacksonville State",
+        "mCT": 6000
+      }
+    ],
+    "Period": 7,
+    "Comm": 0.0011,
+    "Creator": 2,
+    "Settler": {
+      "2": true,
+      "16": true,
+      "104": true
+    },
+    "ComRecip": {
+      "104": 1
+    },
+    "SetFin": 24,
+    "evID": 1598272494
+  },
+  {
+    "ID": "97ee81d7-a709-4acf-bc26-5e55156a7c0b",
+    "LastSoftCh": 638640807938817800,
+    "MarketSummary": "AMERICANFOOTBALL;NCAA;New Mexico State @ Jacksonville State;Game Handicap Spread -19.0;10/09/2024 23:30:00;New Mexico State +19.0 ,Jacksonville State -19.0 ,;1598272494",
+    "MainNodeID": 104,
+    "Comp": "NCAA",
+    "CreationDate": 638638493917573200,
+    "Descr": "Game Handicap Spread -19.0",
+    "Title": "New Mexico State @ Jacksonville State",
+    "Cat": 13,
+    "ClosD": 638641134000000000,
+    "SettlD": 638641206000000000,
+    "Ru": [
+      {
+        "OrdBook": {
+          "MarketID": "97ee81d7-a709-4acf-bc26-5e55156a7c0b",
+          "RunnerID": 0,
+          "Bids": [
+            [
+              2.06,
+              127.11
+            ]
+          ],
+          "Asks": [
+            [
+              2.25,
+              127.11
+            ]
+          ]
+        },
+        "Name": "New Mexico State +19.0 ",
+        "mCT": 6000
+      },
+      {
+        "Name": "Jacksonville State -19.0 ",
+        "mCT": 6000
+      }
+    ],
+    "Type": 3,
+    "Period": 1,
+    "Comm": 0.0011,
+    "Creator": 2,
+    "Settler": {
+      "2": true,
+      "16": true,
+      "104": true
+    },
+    "ComRecip": {
+      "104": 1
+    },
+    "SetFin": 24,
+    "evID": 1598272494
+  },
+  {
+    "ID": "16e89872-2ee8-4529-9568-fc8ac69178b8",
+    "LastSoftCh": 638640804729528200,
+    "MarketSummary": "AMERICANFOOTBALL;NCAA;New Mexico State @ Jacksonville State;1st Half Handicap Spread -13.0;10/09/2024 23:30:00;New Mexico State +13.0 ,Jacksonville State -13.0 ,;1598272494",
+    "MainNodeID": 104,
+    "Comp": "NCAA",
+    "CreationDate": 638638493951111300,
+    "Descr": "1st Half Handicap Spread -13.0",
+    "Title": "New Mexico State @ Jacksonville State",
+    "Cat": 13,
+    "ClosD": 638641134000000000,
+    "SettlD": 638641170000000000,
+    "Ru": [
+      {
+        "OrdBook": {
+          "MarketID": "16e89872-2ee8-4529-9568-fc8ac69178b8",
+          "RunnerID": 0,
+          "Bids": [
+            [
+              1.799,
+              31.11
+            ]
+          ],
+          "Asks": [
+            [
+              1.963,
+              26.11
+            ]
+          ]
+        },
+        "Name": "New Mexico State +13.0 ",
+        "mCT": 6000
+      },
+      {
+        "Name": "Jacksonville State -13.0 ",
+        "mCT": 6000
+      }
+    ],
+    "Type": 3,
+    "Period": 7,
+    "Comm": 0.0011,
+    "Creator": 2,
+    "Settler": {
+      "2": true,
+      "16": true,
+      "104": true
+    },
+    "ComRecip": {
+      "104": 1
+    },
+    "SetFin": 24,
+    "evID": 1598272494
+  },
+  {
+    "ID": "1a18e038-3031-4067-8e93-115406c5ae68",
+    "LastSoftCh": 638640807938809500,
+    "MarketSummary": "AMERICANFOOTBALL;NCAA;New Mexico State @ Jacksonville State;Game Handicap Spread -20.5;10/09/2024 23:30:00;New Mexico State +20.5 ,Jacksonville State -20.5 ,;1598272494",
+    "MainNodeID": 104,
+    "Comp": "NCAA",
+    "CreationDate": 638638493920988400,
+    "Descr": "Game Handicap Spread -20.5",
+    "Title": "New Mexico State @ Jacksonville State",
+    "Cat": 13,
+    "ClosD": 638641134000000000,
+    "SettlD": 638641206000000000,
+    "Ru": [
+      {
+        "OrdBook": {
+          "MarketID": "1a18e038-3031-4067-8e93-115406c5ae68",
+          "RunnerID": 0,
+          "Bids": [
+            [
+              1.942,
+              135.11
+            ]
+          ],
+          "Asks": [
+            [
+              2.07,
+              127.11
+            ]
+          ]
+        },
+        "Name": "New Mexico State +20.5 ",
+        "mCT": 6000
+      },
+      {
+        "Name": "Jacksonville State -20.5 ",
+        "mCT": 6000
+      }
+    ],
+    "Type": 3,
+    "Period": 1,
+    "Comm": 0.0011,
+    "Creator": 2,
+    "Settler": {
+      "2": true,
+      "16": true,
+      "104": true
+    },
+    "ComRecip": {
+      "104": 1
+    },
+    "SetFin": 24,
+    "evID": 1598272494
+  },
+  {
+    "ID": "e7e01d46-2621-4314-9c9e-81842782c894",
+    "LastSoftCh": 638640807939049000,
+    "MarketSummary": "AMERICANFOOTBALL;NCAA;New Mexico State @ Jacksonville State;Game Total Points Over/Under 60.5;10/09/2024 23:30:00;Over 60.5 ,Under 60.5 ,;1598272494",
+    "MainNodeID": 104,
+    "Comp": "NCAA",
+    "CreationDate": 638639854791969200,
+    "Descr": "Game Total Points Over/Under 60.5",
+    "Title": "New Mexico State @ Jacksonville State",
+    "Cat": 13,
+    "ClosD": 638641134000000000,
+    "SettlD": 638641206000000000,
+    "Ru": [
+      {
+        "OrdBook": {
+          "MarketID": "e7e01d46-2621-4314-9c9e-81842782c894",
+          "RunnerID": 0,
+          "Bids": [
+            [
+              2.1,
+              51.11
+            ]
+          ],
+          "Asks": [
+            [
+              2.29,
+              51.11
+            ]
+          ]
+        },
+        "Name": "Over 60.5 ",
+        "mCT": 6000
+      },
+      {
+        "Name": "Under 60.5 ",
+        "mCT": 6000
+      }
+    ],
+    "Type": 1,
+    "Period": 1,
+    "Comm": 0.0011,
+    "Creator": 2,
+    "Settler": {
+      "2": true,
+      "16": true,
+      "104": true
+    },
+    "ComRecip": {
+      "104": 1
+    },
+    "SetFin": 24,
+    "evID": 1598272494
+  },
+  {
+    "ID": "b91af043-2b6d-4bb8-880c-3151a5f8f79e",
+    "LastSoftCh": 638640807938851000,
+    "MarketSummary": "AMERICANFOOTBALL;NCAA;New Mexico State @ Jacksonville State;Game Handicap Spread -21.5;10/09/2024 23:30:00;New Mexico State +21.5 ,Jacksonville State -21.5 ,;1598272494",
+    "MainNodeID": 104,
+    "Comp": "NCAA",
+    "CreationDate": 638638493922383500,
+    "Descr": "Game Handicap Spread -21.5",
+    "Title": "New Mexico State @ Jacksonville State",
+    "Cat": 13,
+    "ClosD": 638641134000000000,
+    "SettlD": 638641206000000000,
+    "Ru": [
+      {
+        "OrdBook": {
+          "MarketID": "b91af043-2b6d-4bb8-880c-3151a5f8f79e",
+          "RunnerID": 0,
+          "Bids": [
+            [
+              1.768,
+              165.11
+            ]
+          ],
+          "Asks": [
+            [
+              1.885,
+              144.11
+            ]
+          ]
+        },
+        "Name": "New Mexico State +21.5 ",
+        "mCT": 6000
+      },
+      {
+        "Name": "Jacksonville State -21.5 ",
+        "mCT": 6000
+      }
+    ],
+    "Type": 3,
+    "Period": 1,
+    "Comm": 0.0011,
+    "Creator": 2,
+    "Settler": {
+      "2": true,
+      "16": true,
+      "104": true
+    },
+    "ComRecip": {
+      "104": 1
+    },
+    "SetFin": 24,
+    "evID": 1598272494
+  },
+  {
+    "ID": "6a149e34-c541-438a-9bac-e5a2fd05a650",
+    "LastSoftCh": 638640807939089700,
+    "MarketSummary": "AMERICANFOOTBALL;NCAA;New Mexico State @ Jacksonville State;1st Half Handicap Spread -13.5;10/09/2024 23:30:00;New Mexico State +13.5 ,Jacksonville State -13.5 ,;1598272494",
+    "MainNodeID": 104,
+    "Comp": "NCAA",
+    "CreationDate": 638638493952187400,
+    "Descr": "1st Half Handicap Spread -13.5",
+    "Title": "New Mexico State @ Jacksonville State",
+    "Cat": 13,
+    "ClosD": 638641134000000000,
+    "SettlD": 638641170000000000,
+    "Ru": [
+      {
+        "OrdBook": {
+          "MarketID": "6a149e34-c541-438a-9bac-e5a2fd05a650",
+          "RunnerID": 0,
+          "Bids": [
+            [
+              1.763,
+              33.11
+            ]
+          ],
+          "Asks": [
+            [
+              1.918,
+              27.11
+            ]
+          ]
+        },
+        "Name": "New Mexico State +13.5 ",
+        "mCT": 6000
+      },
+      {
+        "Name": "Jacksonville State -13.5 ",
+        "mCT": 6000
+      }
+    ],
+    "Type": 3,
+    "Period": 7,
+    "Comm": 0.0011,
+    "Creator": 2,
+    "Settler": {
+      "2": true,
+      "16": true,
+      "104": true
+    },
+    "ComRecip": {
+      "104": 1
+    },
+    "SetFin": 24,
+    "evID": 1598272494
+  },
+  {
+    "ID": "6b244cdb-1dda-4641-96a3-4f77ae9025b4",
+    "LastSoftCh": 638640804729385200,
+    "MarketSummary": "AMERICANFOOTBALL;NCAA;New Mexico State @ Jacksonville State;Game Handicap Spread -22.0;10/09/2024 23:30:00;New Mexico State +22.0 ,Jacksonville State -22.0 ,;1598272494",
+    "MainNodeID": 104,
+    "Comp": "NCAA",
+    "CreationDate": 638638493923809900,
+    "Descr": "Game Handicap Spread -22.0",
+    "Title": "New Mexico State @ Jacksonville State",
+    "Cat": 13,
+    "ClosD": 638641134000000000,
+    "SettlD": 638641206000000000,
+    "Ru": [
+      {
+        "OrdBook": {
+          "MarketID": "6b244cdb-1dda-4641-96a3-4f77ae9025b4",
+          "RunnerID": 0,
+          "Bids": [
+            [
+              1.729,
+              174.11
+            ]
+          ],
+          "Asks": [
+            [
+              1.849,
+              150.11
+            ]
+          ]
+        },
+        "Name": "New Mexico State +22.0 ",
+        "mCT": 6000
+      },
+      {
+        "Name": "Jacksonville State -22.0 ",
+        "mCT": 6000
+      }
+    ],
+    "Type": 3,
+    "Period": 1,
+    "Comm": 0.0011,
+    "Creator": 2,
+    "Settler": {
+      "2": true,
+      "16": true,
+      "104": true
+    },
+    "ComRecip": {
+      "104": 1
+    },
+    "SetFin": 24,
+    "evID": 1598272494
+  },
+  {
+    "ID": "f0f5458c-7545-4b72-bd4a-9eff376fed91",
+    "LastSoftCh": 638640804729645400,
+    "MarketSummary": "AMERICANFOOTBALL;NCAA;New Mexico State @ Jacksonville State;1st Quarter 1Q Total Points Over/Under 14.0;10/09/2024 23:30:00;Over 14.0 ,Under 14.0 ,;1598272494",
+    "MainNodeID": 104,
+    "Comp": "NCAA",
+    "CreationDate": 638640799667899600,
+    "Descr": "1st Quarter 1Q Total Points Over/Under 14.0",
+    "Title": "New Mexico State @ Jacksonville State",
+    "Cat": 13,
+    "ClosD": 638641134000000000,
+    "SettlD": 638641170000000000,
+    "Ru": [
+      {
+        "OrdBook": {
+          "MarketID": "f0f5458c-7545-4b72-bd4a-9eff376fed91",
+          "RunnerID": 0,
+          "Bids": [
+            [
+              2.09,
+              17.11
+            ]
+          ],
+          "Asks": [
+            [
+              2.32,
+              17.11
+            ]
+          ]
+        },
+        "Name": "Over 14.0 ",
+        "mCT": 6000
+      },
+      {
+        "Name": "Under 14.0 ",
+        "mCT": 6000
+      }
+    ],
+    "Type": 1,
+    "Period": 9,
+    "Comm": 0.0011,
+    "Creator": 2,
+    "Settler": {
+      "2": true,
+      "16": true,
+      "104": true
+    },
+    "ComRecip": {
+      "104": 1
+    },
+    "SetFin": 24,
+    "evID": 1598272494
+  },
+  {
+    "ID": "cff55517-3d59-4c6d-bc63-32d2cb805266",
+    "LastSoftCh": 638640807939035400,
+    "MarketSummary": "AMERICANFOOTBALL;NCAA;New Mexico State @ Jacksonville State;Game Total Points Over/Under 60.0;10/09/2024 23:30:00;Over 60.0 ,Under 60.0 ,;1598272494",
+    "MainNodeID": 104,
+    "Comp": "NCAA",
+    "CreationDate": 638639854791413500,
+    "Descr": "Game Total Points Over/Under 60.0",
+    "Title": "New Mexico State @ Jacksonville State",
+    "Cat": 13,
+    "ClosD": 638641134000000000,
+    "SettlD": 638641206000000000,
+    "Ru": [
+      {
+        "OrdBook": {
+          "MarketID": "cff55517-3d59-4c6d-bc63-32d2cb805266",
+          "RunnerID": 0,
+          "Bids": [
+            [
+              2.02,
+              51.11
+            ]
+          ],
+          "Asks": [
+            [
+              2.22,
+              51.11
+            ]
+          ]
+        },
+        "Name": "Over 60.0 ",
+        "mCT": 6000
+      },
+      {
+        "Name": "Under 60.0 ",
+        "mCT": 6000
+      }
+    ],
+    "Type": 1,
+    "Period": 1,
+    "Comm": 0.0011,
+    "Creator": 2,
+    "Settler": {
+      "2": true,
+      "16": true,
+      "104": true
+    },
+    "ComRecip": {
+      "104": 1
+    },
+    "SetFin": 24,
+    "evID": 1598272494
+  },
+  {
+    "ID": "7d486e99-3629-4ddb-9dad-a5575b3efa98",
+    "LastSoftCh": 638640807938898000,
+    "MarketSummary": "AMERICANFOOTBALL;NCAA;New Mexico State @ Jacksonville State;Game Total Points Over/Under 56.5;10/09/2024 23:30:00;Over 56.5 ,Under 56.5 ,;1598272494",
+    "MainNodeID": 104,
+    "Comp": "NCAA",
+    "CreationDate": 638638493931076900,
+    "Descr": "Game Total Points Over/Under 56.5",
+    "Title": "New Mexico State @ Jacksonville State",
+    "Cat": 13,
+    "ClosD": 638641134000000000,
+    "SettlD": 638641206000000000,
+    "Ru": [
+      {
+        "OrdBook": {
+          "MarketID": "7d486e99-3629-4ddb-9dad-a5575b3efa98",
+          "RunnerID": 0,
+          "Bids": [
+            [
+              1.675,
+              75.11
+            ]
+          ],
+          "Asks": [
+            [
+              1.794,
+              64.11
+            ]
+          ]
+        },
+        "Name": "Over 56.5 ",
+        "mCT": 6000
+      },
+      {
+        "Name": "Under 56.5 ",
+        "mCT": 6000
+      }
+    ],
+    "Type": 1,
+    "Period": 1,
+    "Comm": 0.0011,
+    "Creator": 2,
+    "Settler": {
+      "2": true,
+      "16": true,
+      "104": true
+    },
+    "ComRecip": {
+      "104": 1
+    },
+    "SetFin": 24,
+    "evID": 1598272494
+  },
+  {
+    "ID": "56df3900-fde6-48c7-a682-52e4aa970a6e",
+    "LastSoftCh": 638640804729501000,
+    "MarketSummary": "AMERICANFOOTBALL;NCAA;New Mexico State @ Jacksonville State;1st Half Handicap Spread -9.5;10/09/2024 23:30:00;New Mexico State +9.5 ,Jacksonville State -9.5 ,;1598272494",
+    "MainNodeID": 104,
+    "Comp": "NCAA",
+    "CreationDate": 638638493946672800,
+    "Descr": "1st Half Handicap Spread -9.5",
+    "Title": "New Mexico State @ Jacksonville State",
+    "Cat": 13,
+    "ClosD": 638641134000000000,
+    "SettlD": 638641170000000000,
+    "Ru": [
+      {
+        "OrdBook": {
+          "MarketID": "56df3900-fde6-48c7-a682-52e4aa970a6e",
+          "RunnerID": 0,
+          "Bids": [
+            [
+              2.28,
+              25.11
+            ]
+          ],
+          "Asks": [
+            [
+              2.56,
+              25.11
+            ]
+          ]
+        },
+        "Name": "New Mexico State +9.5 ",
+        "mCT": 6000
+      },
+      {
+        "Name": "Jacksonville State -9.5 ",
+        "mCT": 6000
+      }
+    ],
+    "Type": 3,
+    "Period": 7,
+    "Comm": 0.0011,
+    "Creator": 2,
+    "Settler": {
+      "2": true,
+      "16": true,
+      "104": true
+    },
+    "ComRecip": {
+      "104": 1
+    },
+    "SetFin": 24,
+    "evID": 1598272494
+  },
+  {
+    "ID": "38418ad3-94d5-4c1a-a446-3ae9a3499085",
+    "LastSoftCh": 638640804729555300,
+    "MarketSummary": "AMERICANFOOTBALL;NCAA;New Mexico State @ Jacksonville State;1st Half Handicap Spread -14.0;10/09/2024 23:30:00;New Mexico State +14.0 ,Jacksonville State -14.0 ,;1598272494",
+    "MainNodeID": 104,
+    "Comp": "NCAA",
+    "CreationDate": 638638493953377800,
+    "Descr": "1st Half Handicap Spread -14.0",
+    "Title": "New Mexico State @ Jacksonville State",
+    "Cat": 13,
+    "ClosD": 638641134000000000,
+    "SettlD": 638641170000000000,
+    "Ru": [
+      {
+        "OrdBook": {
+          "MarketID": "38418ad3-94d5-4c1a-a446-3ae9a3499085",
+          "RunnerID": 0,
+          "Bids": [
+            [
+              1.652,
+              39.11
+            ]
+          ],
+          "Asks": [
+            [
+              1.794,
+              32.11
+            ]
+          ]
+        },
+        "Name": "New Mexico State +14.0 ",
+        "mCT": 6000
+      },
+      {
+        "Name": "Jacksonville State -14.0 ",
+        "mCT": 6000
+      }
+    ],
+    "Type": 3,
+    "Period": 7,
+    "Comm": 0.0011,
+    "Creator": 2,
+    "Settler": {
+      "2": true,
+      "16": true,
+      "104": true
+    },
+    "ComRecip": {
+      "104": 1
+    },
+    "SetFin": 24,
+    "evID": 1598272494
+  }
+]

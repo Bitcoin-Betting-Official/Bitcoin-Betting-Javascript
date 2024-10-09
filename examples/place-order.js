@@ -1,24 +1,33 @@
 import { createWalletClient, http } from 'viem'
 import { privateKeyToAccount } from 'viem/accounts'
 import { mainnet } from 'viem/chains'
-import { hexToBase64, unixToTicks, checkEnvironentVariables } from './utilities.js';
+import { hexToBase64, unixToTicks, checkEnvironentVariables } from '../utilities.js';
 import WebSocket from 'ws';
+import { v4 as uuidv4 } from 'uuid';
 
-checkEnvironentVariables();
 
 // Operation Config
-const makerOrderId = "9099a901-9180-4869-afb7-e1cc88c2c169"
-const marketID = "6904d2c0-72c1-4f6b-987f-6843f4b19663"
-const amount = 1.392;   // 0.01 mWBTC
-const price = 1.359;    // Decimal odds
+
+const currencyId = 1; // Currency ID: 'mBTC' = 0, 'mETH' = 1, 'WBTC' = 2
+
+
+// checkEnvironentVariables();
+
+// Operation Config
+const makerOrderId = uuidv4();
+console.log("makerOrderId", makerOrderId)
+// "9099a901-9180-4869-afb7-e1cc88c2c169"
+const marketID = "aa4a98ea-812c-4ca6-b74b-6ade7f6e444e"
+const amount = 1.1;   // 0.01 mWBTC
+const price = 1;    // Decimal odds
 const side = 1;         // 1 = Buy, 2 = Sell
 
 // Wallet Config
-const account = privateKeyToAccount(process.env.PRIVATE_KEY)
+const account = privateKeyToAccount("0x8a35b9d771ea0f1380cf68e8173994a7efa3c6b5957f833c54826db135af08e2")
 
 const client = createWalletClient({
     chain: mainnet,
-    transport: http(process.env.RPC_ENDPOINT),
+    transport: http("https://eth.llamarpc.com"),
     account
 })
 
@@ -28,26 +37,32 @@ const placeOrder = async (depositHash) => {
     const orderData = {
         CreatedByUser: unixToTicks(Date.now()),          // User that created maker order
         MinerFeeStr: "0.00001",
-        UnmatchedOrder: {
-            Amount: amount,
-            ID: makerOrderId,
-            Price: price,
-            RemAmount: amount,
-            Side: side,
-            Type: 2
-        },
-        UserID: process.env.USER_ID,
+        NodeID: 12,
+        // UnmatchedOrder: {
+        //     Amount: amount,
+        //     Cur: currencyId,
+        //     ID: makerOrderId,
+        //     Price: price,
+        //     RemAmount: amount,
+        //     Side: side,
+        //     Type: 2,
+        // },
+        UserID: 95,
         UserOrder: {
             MarketID: marketID
         }
     }
+
     const signature = await client.signMessage({ message: JSON.stringify(orderData) })
     const message = {
         Type: "OrderAlteration",
         SignatureUser: hexToBase64(signature.slice(2)),
         Data: orderData
     }
-    const ws = new WebSocket(process.env.NODE_URL);
+
+    console.log(JSON.stringify(message));
+
+    const ws = new WebSocket("wss://bitcoin-betting.org:82");
     ws.on('open', function open() {
         ws.send(JSON.stringify(message));
     });
