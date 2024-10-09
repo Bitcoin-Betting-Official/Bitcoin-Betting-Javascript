@@ -1,0 +1,593 @@
+{
+    "State": "Success",
+    "Type": "SubscribeMarketsByFilter",
+    "Count": 1,
+    "Data": [
+      {
+        "ID": "eadfb16d-0252-46e1-a672-cc646917ca28",
+        "LastSoftCh": 638634832514029700,
+        "MarketSummary": "AMERICANFOOTBALL;NFL;Atlanta Falcons vs. Tampa Bay Buccaneers;Game Props / Tampa Bay Buccaneers Points Range 1st Quarter;10/04/2024 00:10:00;0 - 5,6 - 10,11 - 15,16 - 20,21+,;1597889074",
+        "MainNodeID": 104,
+        "Comp": "NFL",
+        "CreationDate": 638633191379700400,
+        "Descr": "Game Props / Tampa Bay Buccaneers Points Range 1st Quarter",
+        "Title": "Atlanta Falcons vs. Tampa Bay Buccaneers",
+        "Cat": 13,
+        "ClosD": 638635974000000000,
+        "SettlD": 638636046000000000,
+        "Ru": [
+          {
+            "OrdBook": {
+              "MarketID": "eadfb16d-0252-46e1-a672-cc646917ca28",
+              "RunnerID": 0,
+              "Bids": [
+                [
+                  1.606,
+                  14
+                ]
+              ],
+              "Asks": []
+            },
+            "Name": "0 - 5",
+            "mCT": 6000
+          },
+          {
+            "OrdBook": {
+              "MarketID": "eadfb16d-0252-46e1-a672-cc646917ca28",
+              "RunnerID": 1,
+              "Bids": [
+                [
+                  2.94,
+                  8.5
+                ]
+              ],
+              "Asks": []
+            },
+            "Name": "6 - 10",
+            "mCT": 6000
+          },
+          {
+            "OrdBook": {
+              "MarketID": "eadfb16d-0252-46e1-a672-cc646917ca28",
+              "RunnerID": 2,
+              "Bids": [
+                [
+                  11.5,
+                  8.5
+                ]
+              ],
+              "Asks": []
+            },
+            "Name": "11 - 15",
+            "mCT": 6000
+          },
+          {
+            "OrdBook": {
+              "MarketID": "eadfb16d-0252-46e1-a672-cc646917ca28",
+              "RunnerID": 3,
+              "Bids": [
+                [
+                  24,
+                  8.5
+                ]
+              ],
+              "Asks": []
+            },
+            "Name": "16 - 20",
+            "mCT": 6000
+          },
+          {
+            "OrdBook": {
+              "MarketID": "eadfb16d-0252-46e1-a672-cc646917ca28",
+              "RunnerID": 4,
+              "Bids": [
+                [
+                  35,
+                  8.5
+                ]
+              ],
+              "Asks": []
+            },
+            "Name": "21+",
+            "mCT": 6000
+          }
+        ],
+        "Type": 2,
+        "Period": 1,
+        "Comm": 0.001,
+        "Creator": 2,
+        "Settler": {
+          "2": true,
+          "16": true,
+          "104": true
+        },
+        "ComRecip": {
+          "2": 0.5,
+          "104": 0.5
+        },
+        "SetFin": 24,
+        "evID": 1597889074
+      },
+      {
+        "ID": "8eefd5c5-54d0-44b7-9a01-35c2d88460bf",
+        "LastSoftCh": 638635218076397200,
+        "MarketSummary": "AMERICANFOOTBALL;NFL;Atlanta Falcons vs. Tampa Bay Buccaneers;Game Props / Tampa Bay Buccaneers Points Range 1st Half;10/04/2024 00:10:00;0 - 6,7 - 13,14 - 20,21 - 27,28 - 35,36+,;1597889074",
+        "MainNodeID": 104,
+        "Comp": "NFL",
+        "CreationDate": 638633191378345500,
+        "Descr": "Game Props / Tampa Bay Buccaneers Points Range 1st Half",
+        "Title": "Atlanta Falcons vs. Tampa Bay Buccaneers",
+        "Cat": 13,
+        "ClosD": 638635974000000000,
+        "SettlD": 638636046000000000,
+        "Ru": [
+          {
+            "OrdBook": {
+              "MarketID": "8eefd5c5-54d0-44b7-9a01-35c2d88460bf",
+              "RunnerID": 0,
+              "Bids": [
+                [
+                  3.45,
+                  8.5
+                ]
+              ],
+              "Asks": []
+            },
+            "Name": "0 - 6",
+            "mCT": 6000
+          },
+          {
+            "OrdBook": {
+              "MarketID": "8eefd5c5-54d0-44b7-9a01-35c2d88460bf",
+              "RunnerID": 1,
+              "Bids": [
+                [
+                  2.36,
+                  8.5
+                ]
+              ],
+              "Asks": []
+            },
+            "Name": "7 - 13",
+            "mCT": 6000
+          },
+          {
+            "OrdBook": {
+              "MarketID": "8eefd5c5-54d0-44b7-9a01-35c2d88460bf",
+              "RunnerID": 2,
+              "Bids": [
+                [
+                  3.7,
+                  8.5
+                ]
+              ],
+              "Asks": []
+            },
+            "Name": "14 - 20",
+            "mCT": 6000
+          },
+          {
+            "OrdBook": {
+              "MarketID": "8eefd5c5-54d0-44b7-9a01-35c2d88460bf",
+              "RunnerID": 3,
+              "Bids": [
+                [
+                  9.25,
+                  8.5
+                ]
+              ],
+              "Asks": []
+            },
+            "Name": "21 - 27",
+            "mCT": 6000
+          },
+          {
+            "OrdBook": {
+              "MarketID": "8eefd5c5-54d0-44b7-9a01-35c2d88460bf",
+              "RunnerID": 4,
+              "Bids": [
+                [
+                  26,
+                  8.5
+                ]
+              ],
+              "Asks": []
+            },
+            "Name": "28 - 35",
+            "mCT": 6000
+          },
+          {
+            "Name": "36+",
+            "mCT": 6000
+          }
+        ],
+        "Type": 2,
+        "Period": 1,
+        "Comm": 0.001,
+        "Creator": 2,
+        "Settler": {
+          "2": true,
+          "16": true,
+          "104": true
+        },
+        "ComRecip": {
+          "2": 0.5,
+          "104": 0.5
+        },
+        "SetFin": 24,
+        "evID": 1597889074
+      },
+      {
+        "ID": "11bde0d2-4024-43fa-8b33-b07d629ae5a8",
+        "LastSoftCh": 638634832513856500,
+        "MarketSummary": "AMERICANFOOTBALL;NFL;Atlanta Falcons vs. Tampa Bay Buccaneers;Game Props / Atlanta Falcons Points Range 1st Quarter;10/04/2024 00:10:00;0 - 5,6 - 10,11 - 15,16 - 20,21+,;1597889074",
+        "MainNodeID": 104,
+        "Comp": "NFL",
+        "CreationDate": 638633191379301100,
+        "Descr": "Game Props / Atlanta Falcons Points Range 1st Quarter",
+        "Title": "Atlanta Falcons vs. Tampa Bay Buccaneers",
+        "Cat": 13,
+        "ClosD": 638635974000000000,
+        "SettlD": 638636046000000000,
+        "Ru": [
+          {
+            "OrdBook": {
+              "MarketID": "11bde0d2-4024-43fa-8b33-b07d629ae5a8",
+              "RunnerID": 0,
+              "Bids": [
+                [
+                  1.806,
+                  10
+                ]
+              ],
+              "Asks": []
+            },
+            "Name": "0 - 5",
+            "mCT": 6000
+          },
+          {
+            "OrdBook": {
+              "MarketID": "11bde0d2-4024-43fa-8b33-b07d629ae5a8",
+              "RunnerID": 1,
+              "Bids": [
+                [
+                  2.7,
+                  8.5
+                ]
+              ],
+              "Asks": []
+            },
+            "Name": "6 - 10",
+            "mCT": 6000
+          },
+          {
+            "OrdBook": {
+              "MarketID": "11bde0d2-4024-43fa-8b33-b07d629ae5a8",
+              "RunnerID": 2,
+              "Bids": [
+                [
+                  9.25,
+                  8.5
+                ]
+              ],
+              "Asks": []
+            },
+            "Name": "11 - 15",
+            "mCT": 6000
+          },
+          {
+            "OrdBook": {
+              "MarketID": "11bde0d2-4024-43fa-8b33-b07d629ae5a8",
+              "RunnerID": 3,
+              "Bids": [
+                [
+                  17.4,
+                  8.5
+                ]
+              ],
+              "Asks": []
+            },
+            "Name": "16 - 20",
+            "mCT": 6000
+          },
+          {
+            "OrdBook": {
+              "MarketID": "11bde0d2-4024-43fa-8b33-b07d629ae5a8",
+              "RunnerID": 4,
+              "Bids": [
+                [
+                  23,
+                  8.5
+                ]
+              ],
+              "Asks": []
+            },
+            "Name": "21+",
+            "mCT": 6000
+          }
+        ],
+        "Type": 2,
+        "Period": 1,
+        "Comm": 0.001,
+        "Creator": 2,
+        "Settler": {
+          "2": true,
+          "16": true,
+          "104": true
+        },
+        "ComRecip": {
+          "2": 0.5,
+          "104": 0.5
+        },
+        "SetFin": 24,
+        "evID": 1597889074
+      },
+      {
+        "ID": "708f6c08-f2dc-43d2-9048-56e9ae84c009",
+        "LastSoftCh": 638634848103106200,
+        "MarketSummary": "AMERICANFOOTBALL;NFL;Atlanta Falcons vs. Tampa Bay Buccaneers;Game Props / Total Points Range 1st Half;10/04/2024 00:10:00;0 - 10,11 - 20,21 - 30,31 - 40,41+,;1597889074",
+        "MainNodeID": 104,
+        "Comp": "NFL",
+        "CreationDate": 638633191378711000,
+        "Descr": "Game Props / Total Points Range 1st Half",
+        "Title": "Atlanta Falcons vs. Tampa Bay Buccaneers",
+        "Cat": 13,
+        "ClosD": 638635974000000000,
+        "SettlD": 638636046000000000,
+        "Ru": [
+          {
+            "OrdBook": {
+              "MarketID": "708f6c08-f2dc-43d2-9048-56e9ae84c009",
+              "RunnerID": 0,
+              "Bids": [
+                [
+                  5.2,
+                  8.5
+                ]
+              ],
+              "Asks": []
+            },
+            "Name": "0 - 10",
+            "mCT": 6000
+          },
+          {
+            "OrdBook": {
+              "MarketID": "708f6c08-f2dc-43d2-9048-56e9ae84c009",
+              "RunnerID": 1,
+              "Bids": [
+                [
+                  3.05,
+                  8.5
+                ]
+              ],
+              "Asks": []
+            },
+            "Name": "11 - 20",
+            "mCT": 6000
+          },
+          {
+            "OrdBook": {
+              "MarketID": "708f6c08-f2dc-43d2-9048-56e9ae84c009",
+              "RunnerID": 2,
+              "Bids": [
+                [
+                  2.64,
+                  8.5
+                ]
+              ],
+              "Asks": []
+            },
+            "Name": "21 - 30",
+            "mCT": 6000
+          },
+          {
+            "OrdBook": {
+              "MarketID": "708f6c08-f2dc-43d2-9048-56e9ae84c009",
+              "RunnerID": 3,
+              "Bids": [
+                [
+                  5.49,
+                  8.5
+                ]
+              ],
+              "Asks": []
+            },
+            "Name": "31 - 40",
+            "mCT": 6000
+          },
+          {
+            "OrdBook": {
+              "MarketID": "708f6c08-f2dc-43d2-9048-56e9ae84c009",
+              "RunnerID": 4,
+              "Bids": [
+                [
+                  14,
+                  8.5
+                ]
+              ],
+              "Asks": []
+            },
+            "Name": "41+",
+            "mCT": 6000
+          }
+        ],
+        "Type": 2,
+        "Period": 1,
+        "Comm": 0.001,
+        "Creator": 2,
+        "Settler": {
+          "2": true,
+          "16": true,
+          "104": true
+        },
+        "ComRecip": {
+          "2": 0.5,
+          "104": 0.5
+        },
+        "SetFin": 24,
+        "evID": 1597889074
+      },
+      {
+        "ID": "cd69feb6-bfdf-4bdc-9e2c-ffef57aad5b9",
+        "LastSoftCh": 638634832513995100,
+        "MarketSummary": "AMERICANFOOTBALL;NFL;Atlanta Falcons vs. Tampa Bay Buccaneers;Game Props / Total Points Odd/Even 1st Half;10/04/2024 00:10:00;Odd,Even,;1597889074",
+        "MainNodeID": 104,
+        "Comp": "NFL",
+        "CreationDate": 638633191378903400,
+        "Descr": "Game Props / Total Points Odd/Even 1st Half",
+        "Title": "Atlanta Falcons vs. Tampa Bay Buccaneers",
+        "Cat": 13,
+        "ClosD": 638635974000000000,
+        "SettlD": 638636046000000000,
+        "Ru": [
+          {
+            "OrdBook": {
+              "MarketID": "cd69feb6-bfdf-4bdc-9e2c-ffef57aad5b9",
+              "RunnerID": 0,
+              "Bids": [
+                [
+                  1.877,
+                  9.11
+                ]
+              ],
+              "Asks": [
+                [
+                  2.05,
+                  8.11
+                ]
+              ]
+            },
+            "Name": "Odd",
+            "mCT": 6000
+          },
+          {
+            "Name": "Even",
+            "mCT": 6000
+          }
+        ],
+        "Type": 2,
+        "Period": 1,
+        "Comm": 0.001,
+        "Creator": 2,
+        "Settler": {
+          "2": true,
+          "16": true,
+          "104": true
+        },
+        "ComRecip": {
+          "2": 0.5,
+          "104": 0.5
+        },
+        "SetFin": 24,
+        "evID": 1597889074
+      },
+      {
+        "ID": "c0cb4377-7671-495d-a1d0-05970d0f62a7",
+        "LastSoftCh": 638635219464715100,
+        "MarketSummary": "AMERICANFOOTBALL;NFL;Atlanta Falcons vs. Tampa Bay Buccaneers;Game Props / Tampa Bay Buccaneers Points Odd/Even 1st Half;10/04/2024 00:10:00;Odd,Even,;1597889074",
+        "MainNodeID": 104,
+        "Comp": "NFL",
+        "CreationDate": 638633191377211000,
+        "Descr": "Game Props / Tampa Bay Buccaneers Points Odd/Even 1st Half",
+        "Title": "Atlanta Falcons vs. Tampa Bay Buccaneers",
+        "Cat": 13,
+        "ClosD": 638635974000000000,
+        "SettlD": 638636046000000000,
+        "Ru": [
+          {
+            "OrdBook": {
+              "MarketID": "c0cb4377-7671-495d-a1d0-05970d0f62a7",
+              "RunnerID": 0,
+              "Bids": [
+                [
+                  1.925,
+                  9.11
+                ]
+              ],
+              "Asks": [
+                [
+                  2.11,
+                  8.11
+                ]
+              ]
+            },
+            "Name": "Odd",
+            "mCT": 6000
+          },
+          {
+            "Name": "Even",
+            "mCT": 6000
+          }
+        ],
+        "Type": 2,
+        "Period": 1,
+        "Comm": 0.001,
+        "Creator": 2,
+        "Settler": {
+          "2": true,
+          "16": true,
+          "104": true
+        },
+        "ComRecip": {
+          "2": 0.5,
+          "104": 0.5
+        },
+        "SetFin": 24,
+        "evID": 1597889074
+      },
+      {
+        "ID": "709dfdef-db25-445d-ba1a-256dc08368e8",
+        "LastSoftCh": 638634832513747100,
+        "MarketSummary": "AMERICANFOOTBALL;NFL;Atlanta Falcons vs. Tampa Bay Buccaneers;Game Props / Atlanta Falcons Points Odd/Even 1st Half;10/04/2024 00:10:00;Odd,Even,;1597889074",
+        "MainNodeID": 104,
+        "Comp": "NFL",
+        "CreationDate": 638633191377413800,
+        "Descr": "Game Props / Atlanta Falcons Points Odd/Even 1st Half",
+        "Title": "Atlanta Falcons vs. Tampa Bay Buccaneers",
+        "Cat": 13,
+        "ClosD": 638635974000000000,
+        "SettlD": 638636046000000000,
+        "Ru": [
+          {
+            "OrdBook": {
+              "MarketID": "709dfdef-db25-445d-ba1a-256dc08368e8",
+              "RunnerID": 0,
+              "Bids": [
+                [
+                  1.925,
+                  9.11
+                ]
+              ],
+              "Asks": [
+                [
+                  2.11,
+                  8.11
+                ]
+              ]
+            },
+            "Name": "Odd",
+            "mCT": 6000
+          },
+          {
+            "Name": "Even",
+            "mCT": 6000
+          }
+        ],
+        "Type": 2,
+        "Period": 1,
+        "Comm": 0.001,
+        "Creator": 2,
+        "Settler": {
+          "2": true,
+          "16": true,
+          "104": true
+        },
+        "ComRecip": {
+          "2": 0.5,
+          "104": 0.5
+        },
+        "SetFin": 24,
+        "evID": 1597889074
+      }
+    ]
+  }

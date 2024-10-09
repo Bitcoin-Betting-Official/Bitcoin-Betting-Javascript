@@ -1,0 +1,13 @@
+http://83.171.236.114:8080/free4/markets/%7B%22OnlyActive%22:true,%22NoZombie%22:true,%22comp%22:%22NFL%22,%22ToID%22:100,%22Cat%22:13,%22ToClosT%22:%222024-10-13T02:33:24%22%7D
+    const data = {
+        "MarketFilter": {
+            Cat: sportcat,//14
+            // Comp: comp,//"MLB"
+            NoZombie: true,
+            OnlyActive: true,
+            PageSize: 100,
+            Status: 0,    //active
+            ToClosT //2024-10-03T22:04:50.787Z
+        },
+        // "SubscribeOrderbooks": true
+    }

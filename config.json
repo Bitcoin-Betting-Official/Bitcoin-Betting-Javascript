@@ -1,0 +1,639 @@
+{
+    "test": {
+         "sportcat": 12,
+         "limitL": 1.45,
+         "limitM": 4.2,
+         "hours": 2,
+         "count": 200,
+         "minprice": 12,
+         "maxprice": 13,
+         "minvol": 50,
+         "maxvol": 600,
+         "limitdays": 0.5,
+         "limit": 23,
+         "exclude":[
+         ],
+         "include":[
+         ],
+        "titlenot": "",
+         "comp": "",
+         "enablefilter":true
+         
+     },
+     
+    "soccer12": {
+         "sportcat": 1,
+         "limitL": 1.45,
+         "limitM": 4.2,
+         "hours": 2,
+         "count": 800,
+         "minprice": 1,
+         "maxprice": 1.99,
+         "minvol": 99,
+         "maxvol": 199.9,
+         "limitdays": 0.5,
+         "limit": 2,
+         "exclude":["Props"
+         ],
+         "include":[
+         ],
+        "titlenot": "",
+         "comp": "",
+         "enablefilter":true
+         
+     },
+     
+       "soccer24": {
+         "sportcat": 1,
+         "limitL": 1.45,
+         "limitM": 4.2,
+         "hours": 2,
+         "count": 800,
+         "minprice": 1,
+         "maxprice": 1.9,
+         "minvol": 200,
+         "maxvol": 399,
+         "limitdays": 0.5,
+         "limit": 2,
+         "exclude":["Props"
+         ],
+         "include":[
+         ],
+        "titlenot": "Corners",
+         "comp": "",
+         "enablefilter":true
+         
+     },
+     
+      "soccer49": {
+         "sportcat": 1,
+         "limitL": 1.45,
+         "limitM": 4.2,
+         "hours": 2,
+         "count": 800,
+         "minprice": 1,
+         "maxprice": 1.9,
+         "minvol": 399.1,
+         "maxvol": 30000,
+         "limitdays": 0.5,
+         "limit": 2,
+         "exclude":["Props"
+         ],
+         "include":[
+         ],
+        "titlenot": "Corners",
+         "comp": "",
+         "enablefilter":true
+         
+     },
+     
+       "esports12": {
+         "sportcat": 32,
+         "limitL": 1.45,
+         "limitM": 4.2,
+         "hours": 18,
+         "count": 800,
+         "minprice": 1,
+         "maxprice": 1.9,
+         "minvol": 50,
+         "maxvol": 99.9,
+         "limitdays": 0.5,
+         "limit": 2,
+         "exclude":[
+         ],
+         "include":[
+         ],
+        "titlenot": "",
+         "comp": "",
+         "enablefilter":true
+         
+     },
+     
+       "esports24": {
+         "sportcat": 32,
+         "limitL": 1.45,
+         "limitM": 4.2,
+         "hours": 18,
+         "count": 800,
+         "minprice": 1,
+         "maxprice": 1.9,
+         "minvol": 100,
+         "maxvol": 299,
+         "limitdays": 0.5,
+         "limit": 2,
+         "exclude":[
+         ],
+         "include":[
+         ],
+        "titlenot": "",
+         "comp": "",
+         "enablefilter":true
+         
+     },
+     
+       "esports49": {
+         "sportcat": 32,
+         "limitL": 1.45,
+         "limitM": 4.2,
+         "hours": 18,
+         "count": 800,
+         "minprice": 1,
+         "maxprice": 1.9,
+         "minvol": 299.1,
+         "maxvol": 30000,
+         "limitdays": 0.5,
+         "limit": 5,
+         "exclude":[
+         ],
+         "include":[
+         ],
+        "titlenot": "",
+         "comp": "",
+         "enablefilter":true
+         
+     },
+     "basketball12": {
+         "sportcat": 12,
+         "limitL": 1.45,
+         "limitM": 4.2,
+         "hours": 4,
+         "count": 900,
+         "minprice": 1,
+         "maxprice": 1.9,
+         "minvol": 40,
+         "maxvol": 99,
+         "limitdays": 0.5,
+         "limit": 1,
+         "exclude":["Props"
+         ],
+         "include":[
+         ],
+        "titlenot": "",
+         "comp": "",
+         "enablefilter":true
+         
+     },
+     
+       "basketball24": {
+         "sportcat": 12,
+         "limitL": 1.45,
+         "limitM": 4.2,
+         "hours": 4,
+         "count": 900,
+         "minprice": 1,
+         "maxprice": 1.9,
+         "minvol": 99.1,
+         "maxvol": 169.9,
+         "limitdays": 0.5,
+         "limit": 2,
+         "exclude":["Props"
+         ],
+         "include":[
+         ],
+        "titlenot": "",
+         "comp": "",
+         "enablefilter":true
+         
+     },
+     
+      "basketball49": {
+         "sportcat": 12,
+         "limitL": 1.45,
+         "limitM": 4.2,
+         "hours": 4,
+         "count": 900,
+         "minprice": 1,
+         "maxprice": 1.9,
+         "minvol": 170,
+         "maxvol": 19999,
+         "limitdays": 0.5,
+         "limit": 2,
+         "exclude":["Props"
+         ],
+         "include":[
+         ],
+        "titlenot": "",
+         "comp": "",
+         "enablefilter":true
+         
+     },
+     
+ "football12": {
+         "sportcat": 13,
+         "limitL": 1.45,
+         "limitM": 4.2,
+         "hours": 4,
+         "count": 900,
+         "minprice": 1,
+         "maxprice": 1.9,
+         "minvol": 30,
+         "maxvol": 99,
+         "limitdays": 0.5,
+         "limit": 2,
+         "exclude":["Props"
+         ],
+         "include":[
+         ],
+        "titlenot": "",
+         "comp": "",
+         "enablefilter":true
+         
+      },
+     
+ "football24": {
+         "sportcat": 13,
+         "limitL": 1.45,
+         "limitM": 4.2,
+         "hours": 4,
+         "count": 900,
+         "minprice": 1,
+         "maxprice": 1.9,
+         "minvol": 99,
+         "maxvol": 199,
+         "limitdays": 0.5,
+         "limit": 1,
+         "exclude":["Props"
+         ],
+         "include":[
+         ],
+        "titlenot": "",
+         "comp": "",
+         "enablefilter":true
+         
+      },
+     
+     "football49": {
+         "sportcat": 13,
+         "limitL": 1.45,
+         "limitM": 4.2,
+         "hours": 4,
+         "count": 900,
+         "minprice": 1,
+         "maxprice": 1.9,
+         "minvol": 199.1,
+         "maxvol": 25000,
+         "limitdays": 0.5,
+         "limit": 2,
+         "exclude":["Props"
+         ],
+         "include":[
+         ],
+        "titlenot": "",
+         "comp": "",
+         "enablefilter":true
+         
+      },
+     
+     "tennis12": {
+         "sportcat": 2,
+         "limitL": 1.45,
+         "limitM": 4.2,
+         "hours": 4,
+         "count": 900,
+         "minprice": 1,
+         "maxprice": 1.9,
+         "minvol": 30,
+         "maxvol": 99,
+         "limitdays": 0.5,
+         "limit": 2,
+         "exclude":[
+         ],
+         "include":[
+         ],
+        "titlenot": "",
+         "comp": "",
+         "enablefilter":true
+         
+     },
+     
+       "tennis24": {
+         "sportcat": 2,
+         "limitL": 1.45,
+         "limitM": 4.2,
+         "hours": 4,
+         "count": 900,
+         "minprice": 1,
+         "maxprice": 1.99,
+         "minvol": 99.1,
+         "maxvol": 199,
+         "limitdays": 0.5,
+         "limit": 2,
+         "exclude":[
+         ],
+         "include":[
+         ],
+        "titlenot": "",
+         "comp": "",
+         "enablefilter":true
+         
+     },
+     
+      "tennis49": {
+         "sportcat": 2,
+         "limitL": 1,
+         "limitM": 3,
+         "hours": 4,
+         "count": 900,
+         "minprice": 1,
+         "maxprice": 1.9,
+         "minvol": 199.1,
+         "maxvol": 9999,
+         "limitdays": 0.5,
+         "limit": 2,
+         "exclude":[
+         ],
+         "include":[
+         ],
+        "titlenot": "",
+         "comp": "",
+         "enablefilter":true
+     },	
+     
+     "hockey12": {
+         "sportcat": 30,
+         "limitL": 1.45,
+         "limitM": 4.2,
+         "hours": 4,
+         "count": 900,
+         "minprice": 1,
+         "maxprice": 1.9,
+         "minvol": 50,
+         "maxvol": 99,
+         "limitdays": 0.5,
+         "limit": 2,
+         "exclude":["Props"
+         ],
+         "include":[
+         ],
+        "titlenot": "",
+         "comp": "",
+         "enablefilter":true
+         
+     },
+     
+       "hockey24": {
+         "sportcat": 30,
+         "limitL": 1,
+         "limitM": 3,
+         "hours": 4,
+         "count": 900,
+         "minprice": 1,
+         "maxprice": 2,
+         "minvol": 99.1,
+         "maxvol": 199,
+         "limitdays": 0.5,
+         "limit": 2,
+         "exclude":["Props"
+         ],
+         "include":[
+         ],
+        "titlenot": "",
+         "comp": "",
+         "enablefilter":true
+         
+     },
+     
+      "hockey49": {
+         "sportcat": 30,
+         "limitL": 1,
+         "limitM": 3,
+         "hours": 4,
+         "count": 900,
+         "minprice": 1,
+         "maxprice": 1.9,
+         "minvol": 199.1,
+         "maxvol": 90000,
+         "limitdays": 0.5,
+         "limit": 2,
+         "exclude":["Props"
+         ],
+         "include":[
+         ],
+        "titlenot": "",
+         "comp": "",
+         "enablefilter":true
+     },
+         
+     
+     "baseball12": {
+         "sportcat": 14,
+         "limitL": 1.45,
+         "limitM": 4.2,
+         "hours": 4,
+         "count": 900,
+         "minprice": 1,
+         "maxprice": 1.9,
+         "minvol": 50,
+         "maxvol": 99,
+         "limitdays": 0.5,
+         "limit": 2,
+         "exclude":["Props"
+         ],
+         "include":[
+         ],
+        "titlenot": "",
+         "comp": "",
+         "enablefilter":true
+         
+     },
+     
+       "baseball24": {
+         "sportcat": 14,
+         "limitL": 1.45,
+         "limitM": 4.2,
+         "hours": 4,
+         "count": 900,
+         "minprice": 1,
+         "maxprice": 1.9,
+         "minvol": 99.1,
+         "maxvol": 199,
+         "limitdays": 0.5,
+         "limit": 2,
+         "exclude":["Props"
+         ],
+         "include":[
+         ],
+        "titlenot": "",
+         "comp": "",
+         "enablefilter":true
+         
+     },
+     
+      "baseball49": {
+         "sportcat": 14,
+         "limitL": 1.45,
+         "limitM": 4.2,
+         "hours": 4,
+         "count": 900,
+         "minprice": 1,
+         "maxprice": 1.9,
+         "minvol": 199.1,
+         "maxvol": 90000,
+         "limitdays": 0.5,
+         "limit": 2,
+         "exclude":["Props"
+         ],
+         "include":[
+         ],
+        "titlenot": "",
+         "comp": "",
+         "enablefilter":true
+     },
+ 
+ 
+     
+     "9": {
+         "sportcat": "12",
+         "minprice": "12",
+         "maxprice": "13",
+         "simulation": "0",
+         "limitL": "1.45",
+         "limitM": "3.2",
+         "limitdays": ".5",
+         "limit": "23",
+         "titlenot": "",
+         "comp": ""
+     },
+     
+     "2": {
+         "sportcat": "2",
+         "minprice": "15",
+         "maxprice": "16",
+         "simulation": "0",
+         "limitL": "1.45",
+         "limitM": "3.2",
+         "limitdays": ".5",
+         "limit": "27",
+         "titlenot": "",
+         "comp": ""
+     },
+     
+      "3": {
+         "sportcat": "3",
+         "minprice": "13",
+         "maxprice": "14",
+         "simulation": "0",
+         "limitL": "1.45",
+         "limitM": "3.2",
+         "limitdays": ".5",
+         "limit": "7",
+         "titlenot": "",
+         "comp": ""
+     },
+     
+     
+     "11": {
+         "sportcat": "32",
+         "minprice": "9",
+         "maxprice": "10",
+         "simulation": "0",
+         "limitL": "1.45",
+         "limitM": "3.2",
+         "limitdays": ".5",
+         "limit": "7",
+         "titlenot": "",
+         "comp": ""
+     },
+     
+     "19": {
+         "sportcat": "11",
+         "minprice": "3",
+         "maxprice": "4",
+         "simulation": "0",
+         "limitL": "1.45",
+         "limitM": "3.2",
+         "limitdays": ".5",
+         "limit": "3",
+         "titlenot": "",
+         "comp": ""
+     },
+     
+     "30": {
+         "sportcat": "30",
+         "minprice": "7",
+         "maxprice": "8",
+         "simulation": "0",
+         "limitL": "1.45",
+         "limitM": "3.2",
+         "limitdays": ".5",
+         "limit": "13",
+         "titlenot": "vs.",
+         "comp": ""
+     },
+     "12": {
+         "sportcat": "12",
+         "minprice": "24",
+         "maxprice": "25",
+         "simulation": "0",
+         "limitL": "1.45",
+         "limitM": "3.2",
+         "limitdays": ".5",
+         "limit": "45",
+         "titlenot": "",
+         "comp": ""
+     },
+     "1": {
+         "sportcat": "1",
+         "minprice": "14",
+         "maxprice": "15",
+         "simulation": "0",
+         "limitL": "1.45",
+         "limitM": "3.2",
+         "limitdays": ".5",
+         "limit": "44",
+         "titlenot": "",
+         "comp": ""
+     },
+     "14": {
+         "sportcat": "14",
+         "minprice": "9",
+         "maxprice": "10",
+         "simulation": "0",
+         "limitL": "1.45",
+         "limitM": "3.2",
+         "limitdays": ".5",
+         "limit": "13",
+         "titlenot": "vs.",
+         "comp": ""
+         
+     },
+     "13": {
+         "sportcat": "13",
+         "minprice": "24",
+         "maxprice": "25",
+         "simulation": "0",
+         "limitL": "1.45",
+         "limitM": "3.2",
+         "limitdays": ".5",
+         "limit": "47",
+         "titlenot": "vs.",
+         "comp": ""
+     },
+     
+     "32": {
+         "sportcat": "32",
+         "minprice": "10",
+         "maxprice": "11",
+         "simulation": "0",
+         "limitL": "1.45",
+         "limitM": "3.2",
+         "limitdays": ".5",
+         "limit": "26",
+         "titlenot": "",
+         "comp": ""	
+     },	
+     "35": {
+         "sportcat": "35",
+         "minprice": "3",
+         "maxprice": "4",
+         "simulation": "0",
+         "limitL": "1.45",
+         "limitM": "3.2",
+         "limitdays": ".5",
+         "limit": "22",
+         "titlenot": "",
+         "comp": ""
+         }
+ }
+ 
+ 

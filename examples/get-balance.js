@@ -1,5 +1,6 @@
 import WebSocket from 'ws';
 import { checkEnvironentVariables } from './utilities.js';
+import 'dotenv/config'
 
 checkEnvironentVariables();
 
