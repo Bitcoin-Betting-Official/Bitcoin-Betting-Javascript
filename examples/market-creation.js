@@ -28,7 +28,6 @@ const placeOrder = async (depositHash) => {
     const orderData = {
         CreatedByUser: unixToTicks(Date.now()),          // User that created maker order
         MinerFeeStr: "0.00001",
-        NodeID: process.env.NODE_ID,
         UnmatchedOrder: {
             Amount: 1.392,// 0.01 mWBTC
             ID: "9099a901-9180-4869-afb7-e1cc88c2c169",
