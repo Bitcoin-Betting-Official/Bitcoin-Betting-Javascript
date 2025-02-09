@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebSocket Order Placement</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        #logContainer {
+            width: 90%;
+            max-width: 600px;
+            height: 300px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            overflow-y: auto;
+            text-align: left;
+            margin: 20px auto;
+            background: #f9f9f9;
+        }
+        .log-entry {
+            font-size: 14px;
+            padding: 5px;
+            border-bottom: 1px solid #ddd;
+        }
+        .timestamp {
+            font-weight: bold;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h1>WebSocket Order Placement</h1>
+    
+    <form id="connectForm" autocomplete="off">
+    <label for="wsURL">Select WebSocket URL:</label>
+    <select id="wsURL">
+        <option value="wss://node82.sytes.net:82">East Europe node82.sytes.net</option>
+        <option value="wss://node928.info:82">Asia  node928.info</option>
+        <option value="wss://bitcoin-betting.org:82">West Europe bitcoin-betting.org</option>
+        <option value="wss://sa.bitcoin-betting.com:82">South America bitcoin-betting.com</option>
+    </select><br><br>
+    <label for="userid">UserID</label>
+    <input type="number" id="userid" value="111" min="0" max="99999" required><br><br>
+    <button type="button" id="connectWsBtn">Connect WebSocket</button><br><br>
+</form>
+
+    <button id="settingsBtn">Get User Settings</button>
+    <H3> Place an Order </H3>
+    <p>
+    
+    <form id="orderForm">
+    <label for="privateKey">Private Key (length 66 starting with 0x)</label>
+    <input type="text" id="privateKey" autocomplete="off" required><br><br>
+    <label for="marketID">Market ID:</label>
+    <input type="text" id="marketID" required><br><br>
+
+    <label for="price">Price:</label>
+    <input type="number" id="price" step="0.01" value="2" required><br><br>
+
+    <label for="amount">Amount:</label>
+    <input type="number" id="amount" value=0.3  step="any" required><br><br>
+
+    <label for="type">Type (0 or 2):</label>
+      <select id="type">
+        <option value=0>Normal</option>
+        <option value=1>Post only</option>
+        <option value=2>Fill or Kill</option>
+    </select>
+  <br>  <br>
+    <label for="side">Side (0 or 1):</label>
+     <select id="side">
+        <option value=0>Bid</option>
+        <option value=1>Ask</option>
+    </select>
+  <br><br>
+    <button type="submit" id="placeOrderBtn" disabled>Place Order</button>
+</form>
+
+    <div id="logContainer"></div>
+    <script src="https://cdn.jsdelivr.net/npm/ethers@5.6.9/dist/ethers.umd.min.js"></script>
+
+  
+    <script>
+    
+    
+        //import { createWalletClient, http } from 'https://esm.sh/viem@1.0.2';
+        //import { privateKeyToAccount } from 'https://esm.sh/viem@1.0.2/accounts';
+        //import { mainnet } from 'https://esm.sh/viem@1.0.2/chains';
+        
+  	const NODE_URL = '';  // Replace with your WebSocket URL
+        let USER_ID = 16;  // Replace with actual user ID
+        const NODE_ID = 104;  // Replace with actual node ID
+     
+        const logContainer = document.getElementById('logContainer');
+        let logEntries = [];
+
+        function addLogEntry(message) {
+            const timestamp = new Date().toLocaleTimeString();
+            const logEntry = `<div class="log-entry"><span class="timestamp">[${timestamp}]</span> ${message}</div>`;
+            
+            logEntries.push(logEntry);
+            if (logEntries.length > 100) {
+                logEntries.shift(); // Remove the oldest entry
+            }
+
+            logContainer.innerHTML = logEntries.join('');
+            logContainer.scrollTop = logContainer.scrollHeight; // Auto-scroll to latest log
+        }
+        let ws=null;
+
+        document.getElementById('connectWsBtn').addEventListener('click', function () {
+            ws = new WebSocket(document.getElementById('wsURL').value);
+            USER_ID = document.getElementById('userid').value;
+            ws.onerror = (error) => {
+                addLogEntry(`<span style="color: red;">WebSocket error: ${error.message}</span>`);
+            };
+
+            ws.onopen = () => {
+                addLogEntry(`<span style="color: green;">Connected to WebSocket</span>`);
+                ws.send(JSON.stringify({
+                    "Type": "SubscribeBalance",
+                    "UserID": USER_ID,
+                    "NodeID": NODE_ID
+                }));
+            };
+            document.getElementById('placeOrderBtn').disabled = false;
+            ws.onmessage = (event) => {
+                try {
+                    const dataObject = JSON.parse(event.data); 
+                    if (dataObject["Type"] === "SubscribeBalance") {
+                        balanceData = dataObject;
+                        addLogEntry(`Balance received.  ${JSON.stringify(dataObject["Data"])} `);
+                    } else if (dataObject["Type"] === "OrderAlteration") {
+                        addLogEntry(`Order Status: ${JSON.stringify(dataObject["Data"])}`);
+                    } else if (dataObject["Type"]=== "ReturnHeartbeat") {
+                        addLogEntry(`Heartbeat`);
+                    }
+                    else addLogEntry(`Received: ${JSON.stringify(dataObject)}`);
+                } catch (error) {
+                    addLogEntry(`<span style="color: red;">Error processing message: ${error.message}</span>`);
+                }
+            };
+        });   
+        document.getElementById('settingsBtn').addEventListener('click', () => {          
+
+	    if (!ws || ws.readyState !== WebSocket.OPEN) {
+                addLogEntry("WebSocket is not connected.");
+                return;
+            }
+            
+                ws.send(JSON.stringify({
+                    "Type": "GetAccountSettings",
+                    "UserID": USER_ID,
+                    "NodeID": NODE_ID
+                }));
+           
+
+          
+        });
+
+        document.getElementById('orderForm').addEventListener('submit', async (e) => {
+    e.preventDefault();  // Prevent form submission and page reload
+    placeOrderBtn.disabled = true;  // Disable the button to prevent multiple clicks
+    addLogEntry("Placing order...");
+            addLogEntry(`<span style="color: blue;">Placing order...</span>`);
+
+
+         
+       
+            const unixToTicks = (unix) => unix * 10000 + 621355968000000000; // Convert UNIX to Windows ticks
+            const hexToBase64 = (hex) => btoa(String.fromCharCode(...new Uint8Array(hex.match(/.{1,2}/g).map(byte => parseInt(byte, 16)))));
+            
+            const generateUniqueOrderId = () => {
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+        var r = Math.random() * 16 | 0, v = c === 'x' ? r : (r & 0x3 | 0x8);
+        return v.toString(16);
+    });
+};
+
+   		// Order Configuration
+            const makerOrderId = generateUniqueOrderId();
+            const marketID = "766c97ab-4c30-4ffd-addb-a7a6853e9a5c";
+            const amount =parseFloat(document.getElementById('amount').value);
+            const price = parseFloat(document.getElementById('price').value);
+            const side = parseInt(document.getElementById('side').value);
+            const ordertype = parseInt(document.getElementById('type').value);
+            const privateKey = document.getElementById('privateKey').value;
+
+            try {
+                const orderData = {
+                    CreatedByUser: unixToTicks(Date.now()),
+                    MinerFeeStr: "0.00001",
+                    NodeID: 1,
+                    UnmatchedOrder: {
+                        Amount: amount,
+                        ID: makerOrderId,
+                        makerCT : 2000,
+                        Price: price,
+                        RemAmount: amount,
+                        Side: side,
+                        Type: ordertype
+                    },
+                    UserID: USER_ID,
+                    UserOrder: {
+                        MarketID: marketID
+                    }
+                };
+                
+                if (orderData.UnmatchedOrder.Type === 0) {
+    			delete orderData.UnmatchedOrder.Type;
+		}
+		if (orderData.UnmatchedOrder.Side === 0) {
+    			delete orderData.UnmatchedOrder.Side;
+		}
+		
+                const wallet = new ethers.Wallet(privateKey);
+                const signature = await wallet.signMessage(JSON.stringify(orderData));
+                addLogEntry(`<span style="color: green;">Message signed successfully!</span>${JSON.stringify(orderData)}`);
+
+                const message = {
+                    Type: "OrderAlteration",
+                    SignatureUser: hexToBase64(signature.slice(2)),
+                    Data: orderData
+                };
+
+                const ws = new WebSocket(NODE_URL);
+
+                ws.onopen = () => {
+                    addLogEntry(`<span style="color: green;">Connected to WebSocket for Order</span>`);
+                    ws.send(JSON.stringify(message));
+                };
+
+                ws.onmessage = (event) => {
+                    try {
+                        const dataObject = JSON.parse(event.data);
+                        if (dataObject.Type === "OrderAlteration") {
+                            addLogEntry(`<span style="color: green;">Order Placement Status: ${JSON.stringify(dataObject)}</span>`);
+                        }
+                    } catch (error) {
+                        addLogEntry(`<span style="color: red;">Error processing order message: ${error.message}</span>`);
+                    }
+                };
+
+            } catch (error) {
+                addLogEntry(`<span style="color: red;">Error placing order: ${error.message}</span>`);
+            }
+        });
+    </script>
+</body>
+</html>
