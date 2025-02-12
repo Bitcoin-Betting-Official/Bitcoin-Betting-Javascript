@@ -5,7 +5,7 @@
 This project are a couple of JS examples on how to use Bitcoin Betting API. To get started, follow the instructions below.  
 There is a very simple sample script that runs in your browser. It allows you to get your balance and place an order.  It can be found here:
 
-https://ipfs.io/ipfs/bafkreihgcbdwfijiul4kglswi26xhaila36czbatwp5i4cj6olotf6jyzu
+https://ipfs.io/ipfs/bafkreig23znqnsff2zcjbmgpiu4jews3zpj7asg72aorn6dtycgjsfhhzm
 
 
 ## Prerequisites
