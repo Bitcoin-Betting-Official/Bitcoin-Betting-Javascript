@@ -1,254 +1,895 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WebSocket Order Placement</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 20px;
-        }
-        #logContainer {
-            width: 90%;
-            max-width: 600px;
-            height: 300px;
-            border: 1px solid #ccc;
-            padding: 10px;
-            overflow-y: auto;
-            text-align: left;
-            margin: 20px auto;
-            background: #f9f9f9;
-        }
-        .log-entry {
-            font-size: 14px;
-            padding: 5px;
-            border-bottom: 1px solid #ddd;
-        }
-        .timestamp {
-            font-weight: bold;
-            color: #555;
-        }
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin: 20px;
+      }
+      #logContainer {
+        width: 90%;
+        max-width: 600px;
+        height: 300px;
+        border: 1px solid #ccc;
+        padding: 10px;
+        overflow-y: auto;
+        text-align: left;
+        margin: 20px auto;
+        background: #f9f9f9;
+      }
+      .log-entry {
+        font-size: 14px;
+        padding: 5px;
+        border-bottom: 1px solid #ddd;
+      }
+      .timestamp {
+        font-weight: bold;
+        color: #555;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <h1>WebSocket Order Placement</h1>
-    
+
     <form id="connectForm" autocomplete="off">
-    <label for="wsURL">Select WebSocket URL:</label>
-    <select id="wsURL">
-        <option value="wss://node82.sytes.net:82">East Europe node82.sytes.net</option>
-        <option value="wss://node928.info:82">Asia  node928.info</option>
-        <option value="wss://bitcoin-betting.org:82">West Europe bitcoin-betting.org</option>
-        <option value="wss://sa.bitcoin-betting.com:82">South America bitcoin-betting.com</option>
-    </select><br><br>
-    <label for="userid">UserID</label>
-    <input type="number" id="userid" value="111" min="0" max="99999" required><br><br>
-    <button type="button" id="connectWsBtn">Connect WebSocket</button><br><br>
-</form>
+      <label for="wsURL">Select WebSocket URL:</label>
+
+      <select id="wsURL">
+        <option value="wss://bitcoin-betting.org:82">
+          West Europe bitcoin-betting.org
+        </option>
+        <option value="wss://node82.sytes.net:82">
+          East Europe node82.sytes.net
+        </option>
+        <option value="wss://node928.info:82">Asia node928.info</option>
+        <option value="wss://sa.bitcoin-betting.com:82">
+          South America bitcoin-betting.com
+        </option>
+        <option value="">Choose Custom</option></select
+      ><br /><br />
+
+      <label for="wsURLc">Or enter custom URL:</label>
+      <input type="text" id="wsURLc" value="wss://bitcoin-betting.org:82" />
+
+      <br /><br />
+      <label for="userid">UserID</label>
+      <input
+        type="number"
+        id="userid"
+        value="111"
+        min="0"
+        max="99999"
+        required
+      /><br /><br />
+      <button type="button" id="connectWsBtn">Connect WebSocket</button
+      ><br /><br />
+    </form>
 
     <button id="settingsBtn">Get User Settings</button>
-    <H3> Place an Order </H3>
-    <p>
-    
+    <h3>Place an Order / Make a Deposit</h3>
+
     <form id="orderForm">
-    <label for="privateKey">Private Key (length 66 starting with 0x)</label>
-    <input type="text" id="privateKey" autocomplete="off" required><br><br>
-    <label for="marketID">Market ID:</label>
-    <input type="text" id="marketID" required><br><br>
+      <label for="privateKey">Private Key (length 66 starting with 0x)</label>
+      <input
+        type="text"
+        id="privateKey"
+        autocomplete="off"
+        required
+      /><br /><br />
+      <label for="marketID">Market / TX ID / Withdraw Address:</label>
+      <input type="text" id="marketID" required /><br /><br />
 
-    <label for="price">Price:</label>
-    <input type="number" id="price" step="0.01" value="2" required><br><br>
+      <label for="price">Price:</label>
+      <input
+        type="number"
+        id="price"
+        step="0.01"
+        value="2"
+        required
+      /><br /><br />
 
-    <label for="amount">Amount:</label>
-    <input type="number" id="amount" value=0.3  step="any" required><br><br>
+      <label for="amount">Amount (mRBTC):</label>
+      <input
+        type="number"
+        id="amount"
+        value="0.3"
+        step="any"
+        required
+      /><br /><br />
 
-    <label for="type">Type (0 or 2):</label>
+      <label for="type">Type (0 or 2):</label>
       <select id="type">
-        <option value=0>Normal</option>
-        <option value=1>Post only</option>
-        <option value=2>Fill or Kill</option>
-    </select>
-  <br>  <br>
-    <label for="side">Side (0 or 1):</label>
-     <select id="side">
-        <option value=0>Bid</option>
-        <option value=1>Ask</option>
-    </select>
-  <br><br>
-    <button type="submit" id="placeOrderBtn" disabled>Place Order</button>
-</form>
+        <option value="0">Normal</option>
+        <option value="1">Post only</option>
+        <option value="2">Fill or Kill</option>
+      </select>
+      <br />
+      <br />
+      <label for="side">Side (0 or 1):</label>
+      <select id="side">
+        <option value="0">Bid</option>
+        <option value="1">Ask</option>
+      </select>
+      <br /><br />
+      <button type="submit" id="placeOrderBtn" disabled>Place Order</button>
+    </form>
+    <br /><br />
+    <button id="switchNetworkBtn">Switch to Rootstock</button>
+    <button id="callContractBtn">Deposit</button>
+    <button id="claimDeposit">Claim Deposit</button>
+    <button id="transfer">Burn RBTC</button>
+    <p id="txhash">Deposit</p>
 
+    <label for="sign1">sign1:</label>
+    <input type="text" id="sign1" /><br />
+    <label for="sign2">sign2:</label>
+    <input type="text" id="sign2" /><br />
+
+    <button id="claimWithdrawal">Claim Withdrawal</button>
     <div id="logContainer"></div>
+
     <script src="https://cdn.jsdelivr.net/npm/ethers@5.6.9/dist/ethers.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/4.2.1/web3.min.js"></script>
+    <!--   <script src="https://cdn.jsdelivr.net/npm/web3@4.x/dist/web3.min.js"></script>  -->
 
-  
     <script>
-    
-    
-        //import { createWalletClient, http } from 'https://esm.sh/viem@1.0.2';
-        //import { privateKeyToAccount } from 'https://esm.sh/viem@1.0.2/accounts';
-        //import { mainnet } from 'https://esm.sh/viem@1.0.2/chains';
-        
-  	const NODE_URL = '';  // Replace with your WebSocket URL
-        let USER_ID = 16;  // Replace with actual user ID
-        const NODE_ID = 104;  // Replace with actual node ID
-     
-        const logContainer = document.getElementById('logContainer');
-        let logEntries = [];
+      const NODE_ID = 104 // Replace with actual node ID
 
-        function addLogEntry(message) {
-            const timestamp = new Date().toLocaleTimeString();
-            const logEntry = `<div class="log-entry"><span class="timestamp">[${timestamp}]</span> ${message}</div>`;
-            
-            logEntries.push(logEntry);
-            if (logEntries.length > 100) {
-                logEntries.shift(); // Remove the oldest entry
-            }
+      const logContainer = document.getElementById("logContainer")
+      let logEntries = []
 
-            logContainer.innerHTML = logEntries.join('');
-            logContainer.scrollTop = logContainer.scrollHeight; // Auto-scroll to latest log
+      const unixToTicks = (unix) => unix * 10000 + 621355968000000000 // Convert UNIX to Windows ticks
+      const hexToBase64 = (hex) =>
+        btoa(
+          String.fromCharCode(
+            ...new Uint8Array(
+              hex.match(/.{1,2}/g).map((byte) => parseInt(byte, 16)),
+            ),
+          ),
+        )
+
+      const generateUniqueOrderId = () => {
+        return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(
+          /[xy]/g,
+          function (c) {
+            var r = (Math.random() * 16) | 0,
+              v = c === "x" ? r : (r & 0x3) | 0x8
+            return v.toString(16)
+          },
+        )
+      }
+
+      function addLogEntry(message) {
+        const timestamp = new Date().toLocaleTimeString()
+        const logEntry = `<div class="log-entry"><span class="timestamp">[${timestamp}]</span> ${message}</div>`
+
+        logEntries.push(logEntry)
+        if (logEntries.length > 100) {
+          logEntries.shift() // Remove the oldest entry
         }
-        let ws=null;
 
-        document.getElementById('connectWsBtn').addEventListener('click', function () {
-            ws = new WebSocket(document.getElementById('wsURL').value);
-            USER_ID = document.getElementById('userid').value;
-            ws.onerror = (error) => {
-                addLogEntry(`<span style="color: red;">WebSocket error: ${error.message}</span>`);
-            };
+        logContainer.innerHTML = logEntries.join("")
+        logContainer.scrollTop = logContainer.scrollHeight // Auto-scroll to latest log
+      }
+      let ws = null
 
-            ws.onopen = () => {
-                addLogEntry(`<span style="color: green;">Connected to WebSocket</span>`);
-                ws.send(JSON.stringify({
-                    "Type": "SubscribeBalance",
-                    "UserID": USER_ID,
-                    "NodeID": NODE_ID
-                }));
-            };
-            document.getElementById('placeOrderBtn').disabled = false;
-            ws.onmessage = (event) => {
-                try {
-                    const dataObject = JSON.parse(event.data); 
-                    if (dataObject["Type"] === "SubscribeBalance") {
-                        balanceData = dataObject;
-                        addLogEntry(`Balance received.  ${JSON.stringify(dataObject["Data"])} `);
-                    } else if (dataObject["Type"] === "OrderAlteration") {
-                        addLogEntry(`Order Status: ${JSON.stringify(dataObject["Data"])}`);
-                    } else if (dataObject["Type"]=== "ReturnHeartbeat") {
-                        addLogEntry(`Heartbeat`);
-                    }
-                    else addLogEntry(`Received: ${JSON.stringify(dataObject)}`);
-                } catch (error) {
-                    addLogEntry(`<span style="color: red;">Error processing message: ${error.message}</span>`);
-                }
-            };
-        });   
-        document.getElementById('settingsBtn').addEventListener('click', () => {          
+      document
+        .getElementById("connectWsBtn")
+        .addEventListener("click", function () {
+          let urlws = document.getElementById("wsURL").value
+          if (urlws === "") urlws = document.getElementById("wsURLc").value
+          ws = new WebSocket(urlws)
+          const USER_ID = document.getElementById("userid").value
+          ws.onerror = (error) => {
+            addLogEntry(
+              `<span style="color: red;">WebSocket error: ${error.message}</span>`,
+            )
+          }
 
-	    if (!ws || ws.readyState !== WebSocket.OPEN) {
-                addLogEntry("WebSocket is not connected.");
-                return;
-            }
-            
-                ws.send(JSON.stringify({
-                    "Type": "GetAccountSettings",
-                    "UserID": USER_ID,
-                    "NodeID": NODE_ID
-                }));
-           
-
-          
-        });
-
-        document.getElementById('orderForm').addEventListener('submit', async (e) => {
-    e.preventDefault();  // Prevent form submission and page reload
-    placeOrderBtn.disabled = true;  // Disable the button to prevent multiple clicks
-    addLogEntry("Placing order...");
-            addLogEntry(`<span style="color: blue;">Placing order...</span>`);
-
-
-         
-       
-            const unixToTicks = (unix) => unix * 10000 + 621355968000000000; // Convert UNIX to Windows ticks
-            const hexToBase64 = (hex) => btoa(String.fromCharCode(...new Uint8Array(hex.match(/.{1,2}/g).map(byte => parseInt(byte, 16)))));
-            
-            const generateUniqueOrderId = () => {
-    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
-        var r = Math.random() * 16 | 0, v = c === 'x' ? r : (r & 0x3 | 0x8);
-        return v.toString(16);
-    });
-};
-
-   		// Order Configuration
-            const makerOrderId = generateUniqueOrderId();
-            const marketID = "766c97ab-4c30-4ffd-addb-a7a6853e9a5c";
-            const amount =parseFloat(document.getElementById('amount').value);
-            const price = parseFloat(document.getElementById('price').value);
-            const side = parseInt(document.getElementById('side').value);
-            const ordertype = parseInt(document.getElementById('type').value);
-            const privateKey = document.getElementById('privateKey').value;
-
+          ws.onopen = () => {
+            addLogEntry(
+              `<span style="color: green;">Connected to WebSocket</span>`,
+            )
+            ws.send(
+              JSON.stringify({
+                Type: "SubscribeBalance",
+                UserID: USER_ID,
+                NodeID: NODE_ID,
+              }),
+            )
+          }
+          document.getElementById("placeOrderBtn").disabled = false
+          ws.onmessage = (event) => {
             try {
-                const orderData = {
-                    CreatedByUser: unixToTicks(Date.now()),
-                    MinerFeeStr: "0.00001",
-                    NodeID: 1,
-                    UnmatchedOrder: {
-                        Amount: amount,
-                        ID: makerOrderId,
-                        makerCT : 2000,
-                        Price: price,
-                        RemAmount: amount,
-                        Side: side,
-                        Type: ordertype
-                    },
-                    UserID: USER_ID,
-                    UserOrder: {
-                        MarketID: marketID
-                    }
-                };
-                
-                if (orderData.UnmatchedOrder.Type === 0) {
-    			delete orderData.UnmatchedOrder.Type;
-		}
-		if (orderData.UnmatchedOrder.Side === 0) {
-    			delete orderData.UnmatchedOrder.Side;
-		}
-		
-                const wallet = new ethers.Wallet(privateKey);
-                const signature = await wallet.signMessage(JSON.stringify(orderData));
-                addLogEntry(`<span style="color: green;">Message signed successfully!</span>${JSON.stringify(orderData)}`);
-
-                const message = {
-                    Type: "OrderAlteration",
-                    SignatureUser: hexToBase64(signature.slice(2)),
-                    Data: orderData
-                };
-
-                const ws = new WebSocket(NODE_URL);
-
-                ws.onopen = () => {
-                    addLogEntry(`<span style="color: green;">Connected to WebSocket for Order</span>`);
-                    ws.send(JSON.stringify(message));
-                };
-
-                ws.onmessage = (event) => {
-                    try {
-                        const dataObject = JSON.parse(event.data);
-                        if (dataObject.Type === "OrderAlteration") {
-                            addLogEntry(`<span style="color: green;">Order Placement Status: ${JSON.stringify(dataObject)}</span>`);
-                        }
-                    } catch (error) {
-                        addLogEntry(`<span style="color: red;">Error processing order message: ${error.message}</span>`);
-                    }
-                };
-
+              const dataObject = JSON.parse(event.data)
+              if (dataObject["Type"] === "SubscribeBalance") {
+                balanceData = dataObject
+                addLogEntry(
+                  `Balance received.  ${JSON.stringify(dataObject["Data"])} `,
+                )
+              } else if (dataObject["Type"] === "OrderAlteration") {
+                addLogEntry(
+                  `Order Status: ${JSON.stringify(dataObject["Data"])}`,
+                )
+              } else if (dataObject["Type"] === "ReturnHeartbeat") {
+                addLogEntry(`Heartbeat`)
+              } else addLogEntry(`Received: ${JSON.stringify(dataObject)}`)
             } catch (error) {
-                addLogEntry(`<span style="color: red;">Error placing order: ${error.message}</span>`);
+              addLogEntry(
+                `<span style="color: red;">Error processing message: ${error.message}</span>`,
+              )
             }
-        });
+          }
+        })
+      document.getElementById("settingsBtn").addEventListener("click", () => {
+        const USER_ID = document.getElementById("userid").value
+        if (!ws || ws.readyState !== WebSocket.OPEN) {
+          addLogEntry("WebSocket is not connected.")
+          return
+        }
+
+        ws.send(
+          JSON.stringify({
+            Type: "GetAccountSettings",
+            UserID: USER_ID,
+            NodeID: NODE_ID,
+          }),
+        )
+      })
+
+      document
+        .getElementById("orderForm")
+        .addEventListener("submit", async (e) => {
+          e.preventDefault() // Prevent form submission and page reload
+          placeOrderBtn.disabled = true // Disable the button to prevent multiple clicks
+          addLogEntry("Placing order...")
+          addLogEntry(`<span style="color: blue;">Placing order...</span>`)
+
+          // Order Configuration
+          const makerOrderId = generateUniqueOrderId()
+          const marketID = "766c97ab-4c30-4ffd-addb-a7a6853e9a5c"
+          const amount = parseFloat(document.getElementById("amount").value)
+          const price = parseFloat(document.getElementById("price").value)
+          const side = parseInt(document.getElementById("side").value)
+          const ordertype = parseInt(document.getElementById("type").value)
+          const privateKey = document.getElementById("privateKey").value
+          const USER_ID = parseInt(document.getElementById("userid").value)
+          try {
+            const orderData = {
+              CreatedByUser: unixToTicks(Date.now()),
+              MinerFeeStr: "0.00001",
+              NodeID: 1,
+              UnmatchedOrder: {
+                Amount: amount,
+                ID: makerOrderId,
+                makerCT: 2000,
+                Price: price,
+                RemAmount: amount,
+                Side: side,
+                Type: ordertype,
+              },
+              UserID: USER_ID,
+              UserOrder: {
+                MarketID: marketID,
+              },
+            }
+
+            if (orderData.UnmatchedOrder.Type === 0) {
+              delete orderData.UnmatchedOrder.Type
+            }
+            if (orderData.UnmatchedOrder.Side === 0) {
+              delete orderData.UnmatchedOrder.Side
+            }
+
+            const wallet = new ethers.Wallet(privateKey)
+            const signature = await wallet.signMessage(
+              JSON.stringify(orderData),
+            )
+            addLogEntry(
+              `<span style="color: green;">Message signed successfully!</span>${JSON.stringify(orderData)}`,
+            )
+
+            const message = {
+              Type: "OrderAlteration",
+              SignatureUser: hexToBase64(signature.slice(2)),
+              Data: orderData,
+            }
+            ws.send(JSON.stringify(message))
+          } catch (error) {
+            addLogEntry(
+              `<span style="color: red;">Error placing order: ${error.message}</span>`,
+            )
+          }
+        })
+
+      async function claimDeposit() {
+        if (!ws || ws.readyState !== WebSocket.OPEN) {
+          addLogEntry("WebSocket is not connected.")
+          return
+        }
+        addLogEntry("Claiming Deposit...")
+
+        const makerOrderId = generateUniqueOrderId()
+        const marketID = document.getElementById("marketID").value
+        const amount = parseFloat(document.getElementById("amount").value)
+        const privateKey = document.getElementById("privateKey").value
+        const USER_ID = parseInt(document.getElementById("userid").value)
+        try {
+          const orderData = {
+            CreatedByUser: unixToTicks(Date.now()),
+            Currency: {
+              ID: 5,
+            },
+            Deposit: {
+              Amount: amount,
+              TXID: marketID,
+              UserID: USER_ID,
+            },
+            MinerFeeStr: "0.00001",
+            NodeID: 1,
+            UserID: USER_ID,
+          }
+
+          const wallet = new ethers.Wallet(privateKey)
+          const signature = await wallet.signMessage(JSON.stringify(orderData))
+
+          const message = {
+            Type: "CurrencyIssuance",
+            SignatureUser: hexToBase64(signature.slice(2)),
+            Data: orderData,
+          }
+          addLogEntry(`sign: ${JSON.stringify(message)}`)
+          ws.send(JSON.stringify(message))
+        } catch (error) {
+          addLogEntry(
+            `<span style="color: red;">Error placing order: ${error.message}</span>`,
+          )
+        }
+      }
+      async function transfer() {
+        if (!ws || ws.readyState !== WebSocket.OPEN) {
+          addLogEntry("WebSocket is not connected.")
+          return
+        }
+        addLogEntry("Claiming Deposit...")
+
+        const makerOrderId = generateUniqueOrderId()
+        const reference = document.getElementById("marketID").value
+        const amount = parseFloat(document.getElementById("amount").value)
+        const privateKey = document.getElementById("privateKey").value
+        const USER_ID = parseInt(document.getElementById("userid").value)
+        try {
+          const transferData = {
+            Amount: amount,
+            CreatedByUser: unixToTicks(Date.now()),
+            Cur: 5,
+            From: USER_ID,
+            ID: makerOrderId,
+            MinerFeeStr: "0.00001",
+            NodeID: 1,
+            Reference: reference,
+            TType: 10, //Burn = 10, P2p = 0
+            UserID: USER_ID,
+          }
+
+          const wallet = new ethers.Wallet(privateKey)
+          const signature = await wallet.signMessage(
+            JSON.stringify(transferData),
+          )
+
+          const message = {
+            Type: "Transfer",
+            SignatureUser: hexToBase64(signature.slice(2)),
+            Data: transferData,
+          }
+          //	addLogEntry(`sign: ${JSON.stringify(message)}`);
+          ws.send(JSON.stringify(message))
+        } catch (error) {
+          addLogEntry(
+            `<span style="color: red;">Error making transfer: ${error.message}</span>`,
+          )
+        }
+      }
+
+      const ROOTSTOCK_CHAIN_ID = "0x1e" // Rootstock Mainnet (30 in decimal)
+      const ROOTSTOCK_RPC = "https://public-node.rsk.co"
+      const CONTRACT_ADDRESS = "0x5978c6153a06b141cd0935569f600a83eb44aeaa" // Replace with your contract address
+      const CONTRACT_ABI = [
+        {
+          anonymous: false,
+          inputs: [
+            {
+              indexed: true,
+              internalType: "address",
+              name: "sender",
+              type: "address",
+            },
+            {
+              indexed: false,
+              internalType: "uint256",
+              name: "amount",
+              type: "uint256",
+            },
+            {
+              indexed: false,
+              internalType: "uint256",
+              name: "userId",
+              type: "uint256",
+            },
+            {
+              indexed: false,
+              internalType: "string",
+              name: "input",
+              type: "string",
+            },
+          ],
+          name: "Deposited",
+          type: "event",
+        },
+        {
+          anonymous: false,
+          inputs: [
+            {
+              indexed: false,
+              internalType: "address",
+              name: "from",
+              type: "address",
+            },
+            {
+              indexed: false,
+              internalType: "uint256",
+              name: "amount",
+              type: "uint256",
+            },
+            {
+              indexed: false,
+              internalType: "address",
+              name: "tokenAddress",
+              type: "address",
+            },
+          ],
+          name: "ERC20Deposited",
+          type: "event",
+        },
+        {
+          anonymous: false,
+          inputs: [
+            {
+              indexed: false,
+              internalType: "address",
+              name: "to",
+              type: "address",
+            },
+            {
+              indexed: false,
+              internalType: "uint256",
+              name: "amount",
+              type: "uint256",
+            },
+            {
+              indexed: false,
+              internalType: "address",
+              name: "tokenAddress",
+              type: "address",
+            },
+          ],
+          name: "ERC20Withdraw",
+          type: "event",
+        },
+        {
+          anonymous: false,
+          inputs: [
+            {
+              indexed: false,
+              internalType: "address",
+              name: "recovered",
+              type: "address",
+            },
+            {
+              indexed: false,
+              internalType: "address",
+              name: "owner",
+              type: "address",
+            },
+            {
+              indexed: false,
+              internalType: "enum ECDSAVerificator.ErrorType",
+              name: "errorType",
+              type: "uint8",
+            },
+          ],
+          name: "Validate",
+          type: "event",
+        },
+        {
+          anonymous: false,
+          inputs: [
+            {
+              indexed: false,
+              internalType: "address",
+              name: "receiver",
+              type: "address",
+            },
+            {
+              indexed: false,
+              internalType: "uint256",
+              name: "amount",
+              type: "uint256",
+            },
+          ],
+          name: "Withdraw",
+          type: "event",
+        },
+        {
+          inputs: [
+            {
+              internalType: "bytes",
+              name: "pubKey",
+              type: "bytes",
+            },
+          ],
+          name: "changePubKey",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "uint256",
+              name: "userId",
+              type: "uint256",
+            },
+            {
+              internalType: "string",
+              name: "input",
+              type: "string",
+            },
+          ],
+          name: "deposit",
+          outputs: [],
+          stateMutability: "payable",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "uint256",
+              name: "amountSeconds",
+              type: "uint256",
+            },
+          ],
+          name: "pause",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [],
+          name: "resetWithdrawalLimit",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [],
+          name: "resume",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "uint256",
+              name: "_dalyWithdrawalLimit",
+              type: "uint256",
+            },
+            {
+              internalType: "bytes",
+              name: "_publicKey",
+              type: "bytes",
+            },
+            {
+              internalType: "bytes",
+              name: "_publicKey2",
+              type: "bytes",
+            },
+            {
+              internalType: "bytes",
+              name: "_publicKey3",
+              type: "bytes",
+            },
+          ],
+          stateMutability: "nonpayable",
+          type: "constructor",
+        },
+        {
+          inputs: [
+            {
+              internalType: "uint256",
+              name: "amount",
+              type: "uint256",
+            },
+            {
+              internalType: "uint256",
+              name: "nonce",
+              type: "uint256",
+            },
+            {
+              internalType: "address",
+              name: "receiver",
+              type: "address",
+            },
+            {
+              internalType: "bytes32",
+              name: "txid",
+              type: "bytes32",
+            },
+            {
+              internalType: "bytes",
+              name: "signature",
+              type: "bytes",
+            },
+            {
+              internalType: "bytes",
+              name: "signature2",
+              type: "bytes",
+            },
+            {
+              internalType: "bytes",
+              name: "signature3",
+              type: "bytes",
+            },
+          ],
+          name: "withdraw",
+          outputs: [],
+          stateMutability: "payable",
+          type: "function",
+        },
+        {
+          inputs: [],
+          name: "getBalance",
+          outputs: [
+            {
+              internalType: "uint256",
+              name: "",
+              type: "uint256",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [],
+          name: "getPubKey",
+          outputs: [
+            {
+              internalType: "address",
+              name: "",
+              type: "address",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+      ]
+
+      async function switchToRootstock() {
+        if (!window.ethereum) {
+          alert("MetaMask not detected!")
+          return
+        }
+
+        try {
+          await ethereum.request({
+            method: "wallet_switchEthereumChain",
+            params: [{ chainId: ROOTSTOCK_CHAIN_ID }],
+          })
+        } catch (error) {
+          if (error.code === 4902) {
+            // Chain not added, request to add it
+            try {
+              await ethereum.request({
+                method: "wallet_addEthereumChain",
+                params: [
+                  {
+                    chainId: ROOTSTOCK_CHAIN_ID,
+                    chainName: "Rootstock Mainnet",
+                    nativeCurrency: {
+                      name: "RBTC",
+                      symbol: "RBTC",
+                      decimals: 18,
+                    },
+                    rpcUrls: [ROOTSTOCK_RPC],
+                    blockExplorerUrls: ["https://explorer.rsk.co"],
+                  },
+                ],
+              })
+            } catch (addError) {
+              console.error("Failed to add Rootstock:", addError)
+            }
+          } else {
+            console.error("Failed to switch:", error)
+          }
+        }
+      }
+      
+      async function claimWithdrawal() {
+        if (!window.ethereum) {
+          addLogEntry(`MetaMask not detected`)
+
+          // document.getElementById("contractCallOutput").innerText = "MetaMask not detected!";
+          return
+        }
+
+        const web3RSK = new Web3(new Web3.providers.HttpProvider(ROOTSTOCK_RPC))
+        const web3MetaMask = new Web3(window.ethereum) // MetaMask for signing transactions
+
+        const contract = new web3MetaMask.eth.Contract(
+          CONTRACT_ABI,
+          CONTRACT_ADDRESS,
+        )
+
+        const user_id = parseInt(document.getElementById("userid").value)
+        const amount =
+          parseFloat(document.getElementById("amount").value) * 0.001
+
+        const note = "a"
+        const accounts = await web3MetaMask.eth.getAccounts()
+
+        const account = accounts[0]
+
+        const gasPrice = (await web3RSK.eth.getGasPrice()).toString() // Ensure gasPrice is a string
+        const gasLimit = await contract.methods
+          .deposit(user_id, note)
+          .estimateGas({
+            from: account,
+            value: web3RSK.utils.toWei(amount, "ether"),
+          })
+        const nonce = (
+          await web3MetaMask.eth.getTransactionCount(account, "latest")
+        ).toString() // Ensure nonce is a string
+        const encodedABI = contract.methods.deposit(user_id, note).encodeABI() // Correct ABI encoding
+        // Build the transaction
+        const transaction = {
+          from: account,
+          to: CONTRACT_ADDRESS,
+          gas: gasLimit, // Ensure gas is a string
+          gasPrice: gasPrice,
+          nonce: nonce,
+          value: web3RSK.utils.toWei(amount, "ether"), // Ensure value is in Wei
+          data: encodedABI, // No need for .toString(), already a hex string
+        }
+        addLogEntry(
+          "🚀 Built Transaction:" +
+            JSON.stringify(
+              transaction,
+              (key, value) =>
+                typeof value === "bigint" ? value.toString() : value,
+              2,
+            ),
+        )
+
+        try {
+          // Sign the transaction using MetaMask
+
+          const txHash = await web3MetaMask.eth.sendTransaction(transaction)
+
+          //const signedTx = await web3MetaMask.eth.signTransaction(transaction, account);
+          addLogEntry("success: " + txHash)
+
+          document.getElementById("txhash").innerText = txHash.transactionHash
+          document.getElementById("marketID").value = txHash.transactionHash
+          // Send the raw transaction via Rootstock RPC
+          // const txHash = await web3RSK.eth.sendSignedTransaction(signedTx.rawTransaction);
+
+          addLogEntry(
+            "Transaction sent! You can claim your Deposit now! Hash: " +
+              txHash.transactionHash,
+          )
+        } catch (error) {
+          addLogEntry("Transaction failed: " + error.message)
+        }
+      }
+
+      async function callSmartContract() {
+        if (!window.ethereum) {
+          addLogEntry(`MetaMask not detected`)
+
+          // document.getElementById("contractCallOutput").innerText = "MetaMask not detected!";
+          return
+        }
+
+        document.getElementById("marketID").value = "txid will be pasted here"
+        const web3RSK = new Web3(new Web3.providers.HttpProvider(ROOTSTOCK_RPC))
+        const web3MetaMask = new Web3(window.ethereum) // MetaMask for signing transactions
+
+        const contract = new web3MetaMask.eth.Contract(
+          CONTRACT_ABI,
+          CONTRACT_ADDRESS,
+        )
+
+        const user_id = parseInt(document.getElementById("userid").value)
+        const amount =
+          parseFloat(document.getElementById("amount").value) * 0.001
+
+        const note = "a"
+        const accounts = await web3MetaMask.eth.getAccounts()
+
+        const account = accounts[0]
+
+        const gasPrice = (await web3RSK.eth.getGasPrice()).toString() // Ensure gasPrice is a string
+        const gasLimit = await contract.methods
+          .deposit(user_id, note)
+          .estimateGas({
+            from: account,
+            value: web3RSK.utils.toWei(amount, "ether"),
+          })
+        const nonce = (
+          await web3MetaMask.eth.getTransactionCount(account, "latest")
+        ).toString() // Ensure nonce is a string
+        const encodedABI = contract.methods.deposit(user_id, note).encodeABI() // Correct ABI encoding
+        // Build the transaction
+        const transaction = {
+          from: account,
+          to: CONTRACT_ADDRESS,
+          gas: gasLimit, // Ensure gas is a string
+          gasPrice: gasPrice,
+          nonce: nonce,
+          value: web3RSK.utils.toWei(amount, "ether"), // Ensure value is in Wei
+          data: encodedABI, // No need for .toString(), already a hex string
+        }
+        addLogEntry(
+          "🚀 Built Transaction:" +
+            JSON.stringify(
+              transaction,
+              (key, value) =>
+                typeof value === "bigint" ? value.toString() : value,
+              2,
+            ),
+        )
+
+        try {
+          // Sign the transaction using MetaMask
+
+          const txHash = await web3MetaMask.eth.sendTransaction(transaction)
+
+          //const signedTx = await web3MetaMask.eth.signTransaction(transaction, account);
+          addLogEntry("success: " + txHash)
+
+          document.getElementById("txhash").innerText = txHash.transactionHash
+          document.getElementById("marketID").value = txHash.transactionHash
+          // Send the raw transaction via Rootstock RPC
+          // const txHash = await web3RSK.eth.sendSignedTransaction(signedTx.rawTransaction);
+
+          addLogEntry(
+            "Transaction sent! You can claim your Deposit now! Hash: " +
+              txHash.transactionHash,
+          )
+        } catch (error) {
+          addLogEntry("Transaction failed: " + error.message)
+        }
+      }
+
+      document
+        .getElementById("switchNetworkBtn")
+        .addEventListener("click", switchToRootstock)
+      document
+        .getElementById("callContractBtn")
+        .addEventListener("click", callSmartContract)
+      document
+        .getElementById("claimDeposit")
+        .addEventListener("click", claimDeposit)
+      document
+        .getElementById("claimWithdrawal")
+        .addEventListener("click", claimWithdrawal)
+      document.getElementById("transfer").addEventListener("click", transfer)
     </script>
-</body>
+  </body>
 </html>
+
