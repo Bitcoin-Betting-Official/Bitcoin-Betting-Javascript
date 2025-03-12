@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <title>Bitcoin Betting - Markets & Withdrawals</title>
+    <title>Bitcoin Betting</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -27,7 +27,7 @@
         }
         #controls {
             text-align: center;
-            margin-top: 20px;
+            margin-bottom: 20px;
         }
         button {
             margin: 0 5px;
@@ -36,7 +36,13 @@
     </style>
 </head>
 <body>
-<h1>Bitcoin Betting - Markets & Withdrawals</h1>
+<h1>Bitcoin Betting</h1>
+<div id="controls">
+    <button id="withdrawBtn">Withdraw RBTC (0.1)</button>
+    <button id="burnBtn">Burn Funds (0.05)</button>
+    <button id="queryValidationsBtn">Query Burn Validations</button>
+    <button id="callWithdrawBtn">Call Withdrawal Function</button>
+</div>
 <table id="marketsTable">
     <thead>
     <tr>
@@ -51,12 +57,6 @@
     <tbody id="marketsBody"></tbody>
 </table>
 
-<div id="controls">
-    <button id="withdrawBtn">Withdraw RBTC (0.1)</button>
-    <button id="burnBtn">Burn Funds (0.05)</button>
-    <button id="queryValidationsBtn">Query Burn Validations</button>
-    <button id="callWithdrawBtn">Call Withdrawal Function</button>
-</div>
 
 <!-- Load the separate JS modules -->
 <script type="module" src="markets.js"></script>

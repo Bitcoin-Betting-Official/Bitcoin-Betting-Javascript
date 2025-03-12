@@ -17,10 +17,15 @@ function getCurrentNonce() {
 }
 
 /**
- * Subscribes to markets by filter.
- * Once the first 10 markets are received, the WebSocket connection is closed.
+ * Searches markets by filter and subscribes to the initial batch.
+ *
+ * @param {Object} options - Options for searching markets.
+ * @param {Object} options.marketFilter - The filter criteria (e.g., Cat, OnlyActive, Status, PageSize).
+ * @param {boolean} [options.subscribeOrderbooks=false] - Whether to subscribe to orderbook updates.
+ * @param {number} [options.maxResults=1000] - The maximum results to request.
+ * @returns {Promise<Array>} - Resolves with an array of market objects.
  */
-function subscribeMarkets() {
+function subscribeMarkets({marketFilter, subscribeOrderbooks = false, maxResults = 1000}) {
     const ws = new WebSocket(config.NODE_URL);
 
     ws.onopen = () => {
@@ -28,15 +33,11 @@ function subscribeMarkets() {
         // Build the subscription request according to the API specification.
         const request = {
             Type: 'SubscribeMarketsByFilter',
-            MaxResults: 1000,
+            MaxResults: maxResults,
             Nonce: getCurrentNonce(),
             Data: {
-                MarketFilter: {
-                    OnlyActive: true,
-                    PageSize: 100,
-                    // Additional filters (e.g. Cat, Status) can be added here.
-                },
-                SubscribeOrderbooks: false,
+                MarketFilter: marketFilter,
+                SubscribeOrderbooks: subscribeOrderbooks,
             },
         };
         ws.send(JSON.stringify(request));
@@ -151,4 +152,13 @@ function createMarketRow(market) {
 }
 
 // Start the markets subscription when the page loads.
-subscribeMarkets();
+subscribeMarkets({
+    marketFilter: {
+        Cat: 2,           // Example category ID
+        OnlyActive: true,
+        Status: 1,        // For example, 1 might represent "in-play"
+        PageSize: 10,    // Maximum items per page
+    },
+    subscribeOrderbooks: true,
+    maxResults: 100,
+});
