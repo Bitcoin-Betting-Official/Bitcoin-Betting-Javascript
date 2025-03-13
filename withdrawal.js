@@ -1,4 +1,3 @@
-// withdrawal.js
 import {config} from './config.js';
 import {
     createWalletClient,
