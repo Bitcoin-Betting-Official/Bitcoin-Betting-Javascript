@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Bitcoin Betting</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        table {
+            width: 90%;
+            margin: 0 auto;
+            border-collapse: collapse;
+        }
+        th,
+        td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        #controls {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        button {
+            margin: 0 5px;
+            padding: 8px 12px;
+        }
+    </style>
+</head>
+<body>
+<h1>Bitcoin Betting</h1>
+<div id="controls">
+    <button id="withdrawBtn">Withdraw RBTC (0.1)</button>
+    <button id="burnBtn">Burn Funds (0.05)</button>
+    <button id="queryValidationsBtn">Query Burn Validations</button>
+    <button id="callWithdrawBtn">Call Withdrawal Function</button>
+</div>
+<table id="marketsTable">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Competition</th>
+        <th>Close Date</th>
+        <th>Settle Date</th>
+    </tr>
+    </thead>
+    <tbody id="marketsBody"></tbody>
+</table>
+
+
+<!-- Load the separate JS modules -->
+<script type="module" src="markets.js"></script>
+<script type="module" src="withdrawal.js"></script>
+</body>
+</html>
