@@ -39,13 +39,13 @@
       <label for="wsURL">Select WebSocket URL:</label>
 
       <select id="wsURL">
+        <option value="wss://node928.info:82">Asia node928.info</option>
         <option value="wss://bitcoin-betting.org:82">
           West Europe bitcoin-betting.org
         </option>
         <option value="wss://node82.sytes.net:82">
           East Europe node82.sytes.net
         </option>
-        <option value="wss://node928.info:82">Asia node928.info</option>
         <option value="wss://sa.bitcoin-betting.com:82">
           South America bitcoin-betting.com
         </option>
@@ -53,14 +53,14 @@
       ><br /><br />
 
       <label for="wsURLc">Or enter custom URL:</label>
-      <input type="text" id="wsURLc" value="wss://bitcoin-betting.org:82" />
+      <input type="text" id="wsURLc" value="wss://node928.info:82" />
 
       <br /><br />
       <label for="userid">UserID</label>
       <input
         type="number"
         id="userid"
-        value="111"
+        value="14"
         min="0"
         max="99999"
         required
@@ -122,6 +122,8 @@
     <button id="callContractBtn">Deposit</button>
     <button id="claimDeposit">Claim Deposit</button>
     <button id="transfer">Burn RBTC</button>
+    <button id="stake">stake</button>
+    <button id="lendingSettings">lendingSettings</button>
     <p id="txhash">Deposit</p>
 
     <label for="sign1">sign1:</label>
@@ -391,6 +393,88 @@
         } catch (error) {
           addLogEntry(
             `<span style="color: red;">Error making transfer: ${error.message}</span>`,
+          )
+        }
+      }
+
+      async function stake() {
+        if (!ws || ws.readyState !== WebSocket.OPEN) {
+          addLogEntry("WebSocket is not connected.")
+          return
+        }
+        addLogEntry("Claiming Deposit...")
+
+        const makerOrderId = generateUniqueOrderId()
+        const reference = document.getElementById("marketID").value
+        const amount = parseFloat(document.getElementById("amount").value)
+        const privateKey = document.getElementById("privateKey").value
+        const USER_ID = parseInt(document.getElementById("userid").value)
+        try {
+          const transferData = {
+            Amount: -0.01,
+            CreatedByUser: unixToTicks(Date.now()),
+            Cur: 5,
+            From: USER_ID,
+            ID: makerOrderId,
+            MinerFeeStr: "0.00001",
+            NodeID: 1,
+            StakingMarket: "a9e01849-2cbd-4bfa-9cd6-254f4ff2b490",
+            To: USER_ID,
+            TType: 13, //Burn = 10, P2p = 0 , Stake=13
+            UserID: USER_ID,
+          }
+
+          const wallet = new ethers.Wallet(privateKey)
+          const signature = await wallet.signMessage(
+            JSON.stringify(transferData),
+          )
+
+          const message = {
+            Type: "Transfer",
+            SignatureUser: hexToBase64(signature.slice(2)),
+            Data: transferData,
+          }
+          //	addLogEntry(`sign: ${JSON.stringify(message)}`);
+          ws.send(JSON.stringify(message))
+        } catch (error) {
+          addLogEntry(
+            `<span style="color: red;">Error staking: ${error.message}</span>`,
+          )
+        }
+      }
+
+      async function lendingSettings() {
+        if (!ws || ws.readyState !== WebSocket.OPEN) {
+          addLogEntry("WebSocket is not connected.")
+          return
+        }
+        addLogEntry("getting lending Settings...")
+        const privateKey = document.getElementById("privateKey").value
+        const USER_ID = parseInt(document.getElementById("userid").value)
+        try {
+          const transferData = {
+            CreatedByUser: unixToTicks(Date.now()),
+            MinerFeeStr: "0.00001",
+            NodeID: 1,
+            MarketID: "a9e01849-2cbd-4bfa-9cd6-254f4ff2b490",
+            UserID: USER_ID,
+          }
+
+          const wallet = new ethers.Wallet(privateKey)
+          const signature = await wallet.signMessage(
+            JSON.stringify(transferData),
+          )
+
+          const message = {
+            Type: "GetLendingSettings",
+            SignatureUser: hexToBase64(signature.slice(2)),
+            Data: transferData,
+          }
+          //	addLogEntry(`sign: ${JSON.stringify(message)}`);
+          ws.send(JSON.stringify(message))
+        } catch (error) {
+          addLogEntry(
+            `<span style="color: red;">Error staking: ${error.message}</span>`,
           )
         }
       }
@@ -889,7 +973,8 @@
         .getElementById("claimWithdrawal")
         .addEventListener("click", claimWithdrawal)
       document.getElementById("transfer").addEventListener("click", transfer)
+      document.getElementById("stake").addEventListener("click", stake)
+      document.getElementById("lendingSettings").addEventListener("click", lendingSettings)
     </script>
   </body>
 </html>
-
