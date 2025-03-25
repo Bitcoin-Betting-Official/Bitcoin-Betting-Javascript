@@ -1,6 +1,8 @@
 <!doctype html>
 <html lang="en">
   <head>
+ 
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WebSocket Order Placement</title>
@@ -123,6 +125,8 @@
     <button id="claimDeposit">Claim Deposit</button>
     <button id="transfer">Burn RBTC</button>
     <button id="stake">stake</button>
+    <button id="borrow">borrow</button>
+    <button id="place_btc">place_btc</button>
     <button id="lendingSettings">lendingSettings</button>
     <p id="txhash">Deposit</p>
 
@@ -138,8 +142,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/4.2.1/web3.min.js"></script>
     <!--   <script src="https://cdn.jsdelivr.net/npm/web3@4.x/dist/web3.min.js"></script>  -->
 
+
     <script>
-      const NODE_ID = 104 // Replace with actual node ID
+    
+    const NODE_ID = 104 // Replace with actual node ID
 
       const logContainer = document.getElementById("logContainer")
       let logEntries = []
@@ -308,6 +314,26 @@
           }
         })
 
+
+       document
+        .getElementById("switchNetworkBtn")
+        .addEventListener("click", switchToRootstock)
+      document
+        .getElementById("callContractBtn")
+        .addEventListener("click", callSmartContract)
+      document
+        .getElementById("claimDeposit")
+        .addEventListener("click", claimDeposit)
+      document
+        .getElementById("claimWithdrawal")
+        .addEventListener("click", claimWithdrawal)
+      document.getElementById("transfer").addEventListener("click", transfer)
+      document.getElementById("borrow").addEventListener("click", () => stake(true))
+      document.getElementById("stake").addEventListener("click", () => stake(false))
+      document.getElementById("place_btc").addEventListener("click", place_btc)
+      document.getElementById("lendingSettings").addEventListener("click", lendingSettings)
+
+
       async function claimDeposit() {
         if (!ws || ws.readyState !== WebSocket.OPEN) {
           addLogEntry("WebSocket is not connected.")
@@ -395,9 +421,73 @@
             `<span style="color: red;">Error making transfer: ${error.message}</span>`,
           )
         }
+      } 
+      
+      async function place_btc() {
+        if (!ws || ws.readyState !== WebSocket.OPEN) {
+          addLogEntry("WebSocket is not connected.")
+          return
+        }
+         addLogEntry("Placing order...")
+          addLogEntry(`<span style="color: blue;">Placing order...</span>`)
+
+          // Order Configuration
+          const makerOrderId = generateUniqueOrderId()
+          const marketID = "3e24fe0d-6e3f-49eb-b2c9-1e90be0abf78"
+          const amount = parseFloat(document.getElementById("amount").value)
+          const price = parseFloat(document.getElementById("price").value)
+          const side = parseInt(document.getElementById("side").value)
+          const ordertype = 0
+          const privateKey = document.getElementById("privateKey").value
+          const USER_ID = parseInt(document.getElementById("userid").value)
+          try {
+            const orderData = {
+              CreatedByUser: unixToTicks(Date.now()),
+              MinerFeeStr: "0.00001",
+              NodeID: 1,
+              UnmatchedOrder: {
+                Amount: amount,
+                ID: makerOrderId,
+                Price: price,
+                RemAmount: amount,
+                Side: side,
+                Type: ordertype,
+              },
+              UserID: USER_ID,
+              UserOrder: {
+                MarketID: marketID,
+              },
+            }
+
+            if (orderData.UnmatchedOrder.Type === 0) {
+              delete orderData.UnmatchedOrder.Type
+            }
+            if (orderData.UnmatchedOrder.Side === 0) {
+              delete orderData.UnmatchedOrder.Side
+            }
+
+            const wallet = new ethers.Wallet(privateKey)
+            const signature = await wallet.signMessage(
+              JSON.stringify(orderData),
+            )
+            addLogEntry(
+              `<span style="color: green;">Message signed successfully!</span>${JSON.stringify(orderData)}`,
+            )
+
+            const message = {
+              Type: "OrderAlteration",
+              SignatureUser: hexToBase64(signature.slice(2)),
+              Data: orderData,
+            }
+            ws.send(JSON.stringify(message))
+          } catch (error) {
+            addLogEntry(
+              `<span style="color: red;">Error placing order: ${error.message}</span>`,
+            )
+          }
       }
 
-      async function stake() {
+      async function stake(borrow) {
         if (!ws || ws.readyState !== WebSocket.OPEN) {
           addLogEntry("WebSocket is not connected.")
           return
@@ -410,17 +500,27 @@
         const privateKey = document.getElementById("privateKey").value
         const USER_ID = parseInt(document.getElementById("userid").value)
         try {
+          let cur,ttype;
+           if(borrow===true)
+           {
+              cur=6;
+              ttype=19;
+           }
+           else{
+             cur=5;
+             ttype=13;
+           }
+
           const transferData = {
-            Amount: -0.01,
+            Amount: amount,
             CreatedByUser: unixToTicks(Date.now()),
-            Cur: 5,
+            Cur: cur,
             From: USER_ID,
             ID: makerOrderId,
             MinerFeeStr: "0.00001",
             NodeID: 1,
             StakingMarket: "a9e01849-2cbd-4bfa-9cd6-254f4ff2b490",
-            To: USER_ID,
-            TType: 13, //Burn = 10, P2p = 0 , Stake=13
+            TType: ttype, //Burn = 10, P2p = 0 , Stake=13
             UserID: USER_ID,
           }
 
@@ -434,7 +534,7 @@
             SignatureUser: hexToBase64(signature.slice(2)),
             Data: transferData,
           }
-          //	addLogEntry(`sign: ${JSON.stringify(message)}`);
+          addLogEntry(`sign: ${JSON.stringify(message)}`);
           ws.send(JSON.stringify(message))
         } catch (error) {
           addLogEntry(
@@ -460,14 +560,10 @@
             UserID: USER_ID,
           }
 
-          const wallet = new ethers.Wallet(privateKey)
-          const signature = await wallet.signMessage(
-            JSON.stringify(transferData),
-          )
+        
 
           const message = {
             Type: "GetLendingSettings",
-            SignatureUser: hexToBase64(signature.slice(2)),
             Data: transferData,
           }
           //	addLogEntry(`sign: ${JSON.stringify(message)}`);
@@ -479,7 +575,8 @@
         }
       }
 
-      const ROOTSTOCK_CHAIN_ID = "0x1e" // Rootstock Mainnet (30 in decimal)
+   
+     const ROOTSTOCK_CHAIN_ID = "0x1e" // Rootstock Mainnet (30 in decimal)
       const ROOTSTOCK_RPC = "https://public-node.rsk.co"
       const CONTRACT_ADDRESS = "0x5978c6153a06b141cd0935569f600a83eb44aeaa" // Replace with your contract address
       const CONTRACT_ABI = [
@@ -959,22 +1056,10 @@
           addLogEntry("Transaction failed: " + error.message)
         }
       }
-
-      document
-        .getElementById("switchNetworkBtn")
-        .addEventListener("click", switchToRootstock)
-      document
-        .getElementById("callContractBtn")
-        .addEventListener("click", callSmartContract)
-      document
-        .getElementById("claimDeposit")
-        .addEventListener("click", claimDeposit)
-      document
-        .getElementById("claimWithdrawal")
-        .addEventListener("click", claimWithdrawal)
-      document.getElementById("transfer").addEventListener("click", transfer)
-      document.getElementById("stake").addEventListener("click", stake)
-      document.getElementById("lendingSettings").addEventListener("click", lendingSettings)
+     
+    
     </script>
+
+      
   </body>
 </html>
