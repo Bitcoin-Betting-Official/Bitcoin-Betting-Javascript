@@ -127,7 +127,7 @@
     <button id="stake">stake</button>
     <button id="borrow">borrow</button>
     <button id="place_btc">place_btc</button>
-    <button id="lendingSettings">lendingSettings</button>
+    <button id="lendingInfo">GetLendingInfo</button>
     <p id="txhash">Deposit</p>
 
     <label for="sign1">sign1:</label>
@@ -331,7 +331,7 @@
       document.getElementById("borrow").addEventListener("click", () => stake(true))
       document.getElementById("stake").addEventListener("click", () => stake(false))
       document.getElementById("place_btc").addEventListener("click", place_btc)
-      document.getElementById("lendingSettings").addEventListener("click", lendingSettings)
+      document.getElementById("lendingInfo").addEventListener("click", lendingInfo)
 
 
       async function claimDeposit() {
@@ -543,7 +543,7 @@
         }
       }
 
-      async function lendingSettings() {
+      async function lendingInfo() {
         if (!ws || ws.readyState !== WebSocket.OPEN) {
           addLogEntry("WebSocket is not connected.")
           return
@@ -563,7 +563,7 @@
         
 
           const message = {
-            Type: "GetLendingSettings",
+            Type: "GetLendingInfo",
             Data: transferData,
           }
           //	addLogEntry(`sign: ${JSON.stringify(message)}`);
